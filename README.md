@@ -35,9 +35,27 @@ Frontier LLMs inherently suffer from **regression to the mean**. Shaped by massi
 
 ---
 
+## The Council Chancellor (Triage Router & Orchestrator)
+
+In addition to the 18 specific seats, the repository includes an active triage orchestrator:
+
+| Domain | Lens Slug (`SKILL.md`) | Author / Role | Core Invariant | Primary Use Cases |
+|---|---|---|---|---|
+| **Router** | `router/ask-council` | The Council Chancellor | Interactive triage decision tree routing to Solo Lenses, Sequential Pipelines, or Dialectic Tribunals. | Task triage, architectural dilemma arbitration, lens recommendation. |
+
+---
+
 ## Operational Workflows
 
-### 1. The Dialectic Tribunal (Mirror Code Reviews)
+### 1. Interactive Triage via The Chancellor (`/ask-council`)
+When unsure which engineering lens applies, invoke the Chancellor router to analyze the problem and output an execution plan:
+
+```bash
+# Example invocation in Claude Code or Antigravity CLI
+claude "Apply skill router/ask-council to: We are designing a high-throughput event buffer in C++ and debating between virtual polymorphic streams vs contiguous cache arrays."
+```
+
+### 2. The Dialectic Tribunal (Mirror Code Reviews)
 Rather than performing generic pull request audits that dilute opinions into consensus, execute a Dialectic Tribunal by pitting two irreconcilable philosophies against each other:
 
 ```bash
@@ -48,7 +66,20 @@ claude "Run a Dialectic Tribunal on src/engine/tick.rs:
 Produce two uncompromising, independent audits followed by a trade-off matrix."
 ```
 
-### 2. Sequential Refinement Pipelines
+#### Pre-Configured Dialectic Clash Pairs (`conflict_matrix`):
+1. **`muratori-data-oriented` vs `fowler-evolutionary-design`**: Hardware Mechanical Sympathy vs Enterprise Domain Model Abstractions.
+2. **`ousterhout-deep-modules` vs `fowler-evolutionary-design`**: Deep Modules (Thick Classes) vs Granular Class/Method Refactoring.
+3. **`armstrong-fault-isolation` vs `stenberg-defensive-c`**: Share-Nothing "Let It Crash" vs Defensive Error Handling and Never Abort.
+4. **`dhh-majestic-monolith` vs `Microservices / Cloud-Native`**: Majestic Monolith & Bare-Metal vs Distributed Cloud-Native Topology.
+5. **`hickey-simple-values` vs `OOP mutable encapsulation`**: Immutable Value Semantics & Epochal State vs Mutable In-Place Encapsulation (PLOP).
+6. **`uncle-bob-solid-orthodox` vs `muratori-data-oriented`**: Dynamic Polymorphic Layers vs Cache-Aligned CPU Memory.
+7. **`uncle-bob-solid-orthodox` vs `ousterhout-deep-modules`**: Granular Micro-Methods vs Deep Encapsulated Interfaces.
+8. **`djb-isolated-privilege` vs `stenberg-defensive-c`**: OS-Level Privilege Drop & Micro-Binaries vs Internal Defensive Pointer Management.
+9. **`king-type-driven-design` vs `pike-unix-minimalism`**: Algebraic Compile-Time Type Proofs vs Raw Byte Slices & Loose Interfaces.
+10. **`lamport-state-invariants` vs `armstrong-fault-isolation`**: Mathematical State Validation Before Execution vs Reactive Supervision Trees.
+11. **`carmack-inlined-execution` vs `fowler-evolutionary-design`**: Inline Execution Without Indirection vs Extracted Helper Methods & Evolutionary Layers.
+
+### 3. Sequential Refinement Pipelines
 Stack complementary skills across orthogonal layers of abstraction to take a feature from domain design down to hardware execution:
 
 * **High-Throughput Network Engine:**
@@ -69,11 +100,13 @@ Stack complementary skills across orthogonal layers of abstraction to take a fea
 ## Repository Layout
 
 ```text
-the-council/
+TheCouncil/
 ├── README.md                      # Human-facing specification, catalog, and workflows
-├── COUNCIL_MANIFEST.md            # Agent-facing operational manifest (Claude Code / Antigravity)
+├── AGENT_MANIFEST.md              # Agent-facing operational manifest (Claude Code / Antigravity)
 ├── skills/
 │   ├── registry.json              # Machine-readable registry and conflict matrix
+│   ├── router/
+│   │   └── ask-council/SKILL.md   # The Council Chancellor interactive triage router
 │   ├── systems/
 │   │   ├── antirez-pragmatic-c/SKILL.md
 │   │   ├── stenberg-defensive-c/SKILL.md
