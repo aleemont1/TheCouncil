@@ -97,12 +97,42 @@ Stack complementary skills across orthogonal layers of abstraction to take a fea
 
 ---
 
+## Installation & Agent Setup
+
+TheCouncil provides a universal installer script [`scripts/install.sh`](file:///home/aleemont/TheCouncil/scripts/install.sh) compatible with **Claude Code**, **Google Antigravity CLI (AGY)**, **Cursor**, **Windsurf**, **Cline / Roo Code**, **Aider**, and **GitHub Copilot**.
+
+See the full [**Installation Guide (`INSTALL.md`)**](file:///home/aleemont/TheCouncil/INSTALL.md) for detailed agent-by-agent instructions.
+
+### Quick Start (One-Liner)
+
+```bash
+# Auto-detect all agents and configure automatically (symlink mode):
+./scripts/install.sh --all
+
+# Or install for a specific agent:
+./scripts/install.sh --claude         # Anthropic Claude Code (global ~/.claude/skills)
+./scripts/install.sh --antigravity    # Google Antigravity CLI (~/.gemini/config/skills)
+./scripts/install.sh --cursor         # Cursor IDE (.cursor/rules/the-council.mdc)
+./scripts/install.sh --windsurf       # Windsurf IDE (.windsurfrules)
+./scripts/install.sh --cline          # Cline / Roo Code (.clinerules)
+./scripts/install.sh --aider          # Aider (.aider.conf.yml)
+./scripts/install.sh --copilot        # GitHub Copilot (.github/copilot-instructions.md)
+
+# Verify active skills across all detected environments:
+./scripts/install.sh --verify
+```
+
+---
+
 ## Repository Layout
 
 ```text
 TheCouncil/
 ├── README.md                      # Human-facing specification, catalog, and workflows
-├── AGENT_MANIFEST.md              # Agent-facing operational manifest (Claude Code / Antigravity)
+├── INSTALL.md                     # Universal installation guide across AI coding agents
+├── AGENT_MANIFEST.md              # Agent-facing operational manifest
+├── scripts/
+│   └── install.sh                 # Universal automated skill installer CLI
 ├── skills/
 │   ├── registry.json              # Machine-readable registry and conflict matrix
 │   ├── router/
