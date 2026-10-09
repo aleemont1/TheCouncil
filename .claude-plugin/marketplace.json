@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "the-council",
+  "description": "Dialectic AI Engineering Lenses & High-Constraint Skills for Autonomous Coding Agents.",
+  "owner": {
+    "name": "TheCouncil"
+  },
+  "plugins": [
+    {
+      "name": "the-council",
+      "description": "18 Dialectic Engineering Lenses & High-Constraint Skills (Carmack, Lamport, Muratori, Cantrill, etc.) + Chancellor intent router.",
+      "source": "./",
+      "category": "engineering"
+    }
+  ]
+}

@@ -99,27 +99,38 @@ Stack complementary skills across orthogonal layers of abstraction to take a fea
 
 ## Installation & Agent Setup
 
-TheCouncil provides a universal installer script [`scripts/install.sh`](file:///home/aleemont/TheCouncil/scripts/install.sh) compatible with **Claude Code**, **Google Antigravity CLI (AGY)**, **Cursor**, **Windsurf**, **Cline / Roo Code**, **Aider**, and **GitHub Copilot**.
+TheCouncil supports the standard AI agent installation paradigms: **`npx skills`** (auto-detects Cursor, Claude Code, Antigravity, Copilot, etc.) and **direct GitHub repository marketplace integration** (Claude Code `/plugin marketplace add` and Antigravity `agy plugin install`).
 
-See the full [**Installation Guide (`INSTALL.md`)**](file:///home/aleemont/TheCouncil/INSTALL.md) for detailed agent-by-agent instructions.
+See the full [**Installation Guide (`INSTALL.md`)**](file:///home/aleemont/TheCouncil/INSTALL.md) for complete details.
 
-### Quick Start (One-Liner)
+### 1. Universal Install via `npx skills` (All Agents)
 
 ```bash
-# Auto-detect all agents and configure automatically (symlink mode):
-./scripts/install.sh --all
+# Add all 19 skills to current project (auto-detects installed coding agents):
+npx skills add <owner>/TheCouncil
 
-# Or install for a specific agent:
-./scripts/install.sh --claude         # Anthropic Claude Code (global ~/.claude/skills)
-./scripts/install.sh --antigravity    # Google Antigravity CLI (~/.gemini/config/skills)
-./scripts/install.sh --cursor         # Cursor IDE (.cursor/rules/the-council.mdc)
-./scripts/install.sh --windsurf       # Windsurf IDE (.windsurfrules)
-./scripts/install.sh --cline          # Cline / Roo Code (.clinerules)
-./scripts/install.sh --aider          # Aider (.aider.conf.yml)
-./scripts/install.sh --copilot        # GitHub Copilot (.github/copilot-instructions.md)
+# Add globally across all projects on your machine:
+npx skills add <owner>/TheCouncil -g
 
-# Verify active skills across all detected environments:
-./scripts/install.sh --verify
+# Add a specific lens (e.g. Chancellor router or Muratori Data-Oriented Design):
+npx skills add <owner>/TheCouncil --skill router/ask-council
+npx skills add <owner>/TheCouncil --skill performance/muratori-data-oriented
+```
+
+### 2. Claude Code Plugin Marketplace (Direct GitHub Repo)
+
+In an interactive Claude Code session (or Claude Code Desktop app):
+
+```text
+/plugin marketplace add <owner>/TheCouncil
+/plugin install the-council@the-council
+```
+
+### 3. Google Antigravity CLI / Gemini Extensions
+
+```bash
+agy plugin install https://github.com/<owner>/TheCouncil
+# or: gemini extensions install https://github.com/<owner>/TheCouncil
 ```
 
 ---
@@ -129,10 +140,16 @@ See the full [**Installation Guide (`INSTALL.md`)**](file:///home/aleemont/TheCo
 ```text
 TheCouncil/
 ├── README.md                      # Human-facing specification, catalog, and workflows
-├── INSTALL.md                     # Universal installation guide across AI coding agents
+├── INSTALL.md                     # Universal installation guide (npx, marketplace, manual)
 ├── AGENT_MANIFEST.md              # Agent-facing operational manifest
+├── package.json                   # Universal agent skills & npm manifest
+├── gemini-extension.json          # Antigravity CLI / Gemini plugin manifest
+├── plugin.json                    # Root plugin descriptor
+├── .claude-plugin/
+│   ├── marketplace.json           # Claude Code external marketplace definition
+│   └── plugin.json                # Claude Code plugin manifest
 ├── scripts/
-│   └── install.sh                 # Universal automated skill installer CLI
+│   └── install.sh                 # Offline / air-gapped local installer script
 ├── skills/
 │   ├── registry.json              # Machine-readable registry and conflict matrix
 │   ├── router/

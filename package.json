@@ -1,0 +1,28 @@
+{
+  "name": "@thecouncil/skills",
+  "version": "1.0.0",
+  "description": "Dialectic AI Engineering Lenses & High-Constraint Skills for Autonomous Coding Agents.",
+  "keywords": [
+    "skills",
+    "agent-skills",
+    "claude-code",
+    "claude-plugin",
+    "antigravity",
+    "cursor",
+    "engineering-lenses",
+    "the-council"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aleemont/TheCouncil",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleemont/TheCouncil.git"
+  },
+  "files": [
+    "skills/",
+    "AGENT_MANIFEST.md",
+    ".claude-plugin/",
+    "gemini-extension.json",
+    "plugin.json"
+  ]
+}
