@@ -12,23 +12,23 @@ The Council supports the open [Agent Skills CLI](https://skills.sh/). This metho
 
 ```bash
 # Install all 19 skills into your project workspace (auto-detects active agents):
-npx skills add <owner>/TheCouncil
+npx skills add aleemont1/TheCouncil
 
 # Install all skills globally (available across all projects on your machine):
-npx skills add <owner>/TheCouncil -g
+npx skills add aleemont1/TheCouncil -g
 
 # Install non-interactively to all detected agents:
-npx skills add <owner>/TheCouncil --all
+npx skills add aleemont1/TheCouncil --all
 
 # List all available Council skills without installing:
-npx skills add <owner>/TheCouncil -l
+npx skills add aleemont1/TheCouncil -l
 
 # Install a specific skill (e.g., Chancellor router or Casey Muratori DOD lens):
-npx skills add <owner>/TheCouncil --skill router/ask-council
-npx skills add <owner>/TheCouncil --skill performance/muratori-data-oriented
+npx skills add aleemont1/TheCouncil --skill router/ask-council
+npx skills add aleemont1/TheCouncil --skill performance/muratori-data-oriented
 
 # Install specifically for designated agents:
-npx skills add <owner>/TheCouncil --agent claude-code cursor -g
+npx skills add aleemont1/TheCouncil --agent claude-code cursor -g
 ```
 
 ---
@@ -42,7 +42,7 @@ TheCouncil repository contains native `.claude-plugin/marketplace.json` and `.cl
 In an interactive Claude Code session (or Claude Code Desktop app):
 
 ```text
-/plugin marketplace add <owner>/TheCouncil
+/plugin marketplace add aleemont1/TheCouncil
 /plugin install the-council@the-council
 ```
 
@@ -56,7 +56,7 @@ To uninstall:
 ### In Codex CLI
 
 ```bash
-codex plugin marketplace add <owner>/TheCouncil
+codex plugin marketplace add aleemont1/TheCouncil
 codex plugin add the-council@the-council
 ```
 
@@ -73,10 +73,10 @@ The repository ships with `gemini-extension.json` and `plugin.json`. You can ins
 
 ```bash
 # Using Antigravity CLI (agy):
-agy plugin install https://github.com/<owner>/TheCouncil
+agy plugin install https://github.com/aleemont1/TheCouncil
 
 # Or using Gemini CLI:
-gemini extensions install https://github.com/<owner>/TheCouncil
+gemini extensions install https://github.com/aleemont1/TheCouncil
 ```
 
 To verify the installation:
@@ -156,7 +156,7 @@ If working in an air-gapped environment or if you prefer a standalone local syml
 
 ```bash
 # Clone the repository
-git clone https://github.com/<owner>/TheCouncil.git
+git clone https://github.com/aleemont1/TheCouncil.git
 cd TheCouncil
 
 # Auto-detect all agents and install:

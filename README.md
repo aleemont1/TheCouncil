@@ -107,14 +107,14 @@ See the full [**Installation Guide (`INSTALL.md`)**](file:///home/aleemont/TheCo
 
 ```bash
 # Add all 19 skills to current project (auto-detects installed coding agents):
-npx skills add <owner>/TheCouncil
+npx skills add aleemont1/TheCouncil
 
 # Add globally across all projects on your machine:
-npx skills add <owner>/TheCouncil -g
+npx skills add aleemont1/TheCouncil -g
 
 # Add a specific lens (e.g. Chancellor router or Muratori Data-Oriented Design):
-npx skills add <owner>/TheCouncil --skill router/ask-council
-npx skills add <owner>/TheCouncil --skill performance/muratori-data-oriented
+npx skills add aleemont1/TheCouncil --skill router/ask-council
+npx skills add aleemont1/TheCouncil --skill performance/muratori-data-oriented
 ```
 
 ### 2. Claude Code Plugin Marketplace (Direct GitHub Repo)
@@ -122,15 +122,15 @@ npx skills add <owner>/TheCouncil --skill performance/muratori-data-oriented
 In an interactive Claude Code session (or Claude Code Desktop app):
 
 ```text
-/plugin marketplace add <owner>/TheCouncil
+/plugin marketplace add aleemont1/TheCouncil
 /plugin install the-council@the-council
 ```
 
 ### 3. Google Antigravity CLI / Gemini Extensions
 
 ```bash
-agy plugin install https://github.com/<owner>/TheCouncil
-# or: gemini extensions install https://github.com/<owner>/TheCouncil
+agy plugin install https://github.com/aleemont1/TheCouncil
+# or: gemini extensions install https://github.com/aleemont1/TheCouncil
 ```
 
 ---

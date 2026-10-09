@@ -1,5 +1,5 @@
 {
-  "name": "@thecouncil/skills",
+  "name": "@aleemont1/the-council",
   "version": "1.0.0",
   "description": "Dialectic AI Engineering Lenses & High-Constraint Skills for Autonomous Coding Agents.",
   "keywords": [
@@ -12,11 +12,15 @@
     "engineering-lenses",
     "the-council"
   ],
+  "author": {
+    "name": "aleemont1",
+    "url": "https://github.com/aleemont1"
+  },
   "license": "MIT",
-  "homepage": "https://github.com/aleemont/TheCouncil",
+  "homepage": "https://github.com/aleemont1/TheCouncil",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aleemont/TheCouncil.git"
+    "url": "git+https://github.com/aleemont1/TheCouncil.git"
   },
   "files": [
     "skills/",

@@ -1,5 +1,9 @@
 {
   "name": "the-council",
   "version": "1.0.0",
-  "description": "18 Dialectic Engineering Lenses & High-Constraint Skills for Autonomous Coding Agents."
+  "description": "18 Dialectic Engineering Lenses & High-Constraint Skills for Autonomous Coding Agents.",
+  "author": {
+    "name": "aleemont1",
+    "url": "https://github.com/aleemont1"
+  }
 }
