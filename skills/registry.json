@@ -1,0 +1,689 @@
+{
+  "version": "2.0.0",
+  "description": "Registry of 18 Engineering Philosophy Skills grounded in primary source essays, papers, benchmarks, and production systems.",
+  "skills": [
+    {
+      "name": "router/ask-council",
+      "path": "router/ask-council/SKILL.md",
+      "category": "router",
+      "author": "The Council Chancellor",
+      "triggers": [
+        "ask-council",
+        "council",
+        "triage",
+        "which-lens",
+        "recommend-skill"
+      ],
+      "conflicts_with": [],
+      "primary_sources": [
+        {
+          "title": "Skills System Architecture by Matt Pocock",
+          "url": "https://github.com/mattpocock/skills"
+        }
+      ]
+    },
+    {
+      "name": "systems/antirez-pragmatic-c",
+      "path": "systems/antirez-pragmatic-c/SKILL.md",
+      "category": "systems",
+      "author": "Salvatore Sanfilippo",
+      "triggers": [
+        "event-loop",
+        "single-threaded",
+        "in-memory",
+        "pragmatic-c",
+        "zero-dependency",
+        "redis-architecture"
+      ],
+      "conflicts_with": [
+        "architecture/fowler-evolutionary-design",
+        "state/hickey-simple-values"
+      ],
+      "primary_sources": [
+        {
+          "title": "Redis Architecture",
+          "url": "http://antirez.com/news/119"
+        },
+        {
+          "title": "Optimization Philosophy ('The code you don't write')",
+          "url": "http://antirez.com/news/78"
+        },
+        {
+          "title": "Smallchat Reference C Implementation",
+          "url": "https://raw.githubusercontent.com/antirez/smallchat/master/smallchat.c"
+        }
+      ]
+    },
+    {
+      "name": "systems/stenberg-defensive-c",
+      "path": "systems/stenberg-defensive-c/SKILL.md",
+      "category": "systems",
+      "author": "Daniel Stenberg",
+      "triggers": [
+        "defensive-c",
+        "libcurl-style",
+        "cross-platform-portability",
+        "c89-compliance",
+        "vulnerability-lifecycle",
+        "protocol-state-machine"
+      ],
+      "conflicts_with": [
+        "resilience/armstrong-fault-isolation",
+        "performance/muratori-data-oriented",
+        "security/djb-isolated-privilege"
+      ],
+      "primary_sources": [
+        {
+          "title": "HTTP/3 Explained",
+          "url": "https://http3-explained.haxx.se/"
+        },
+        {
+          "title": "Security Vulnerability Process",
+          "url": "https://daniel.haxx.se/blog/2021/08/27/the-curl-security-vulnerability-process/"
+        },
+        {
+          "title": "libcurl C Code Guidelines",
+          "url": "https://curl.se/dev/code-style.html"
+        }
+      ]
+    },
+    {
+      "name": "systems/pike-unix-minimalism",
+      "path": "systems/pike-unix-minimalism/SKILL.md",
+      "category": "systems",
+      "author": "Rob Pike & Ken Thompson",
+      "triggers": [
+        "data-dominates",
+        "unix-minimalism",
+        "go-proverbs",
+        "clear-over-clever",
+        "csp-concurrency",
+        "small-interfaces"
+      ],
+      "conflicts_with": [
+        "architecture/ousterhout-deep-modules",
+        "architecture/fowler-evolutionary-design",
+        "types/king-type-driven-design"
+      ],
+      "primary_sources": [
+        {
+          "title": "Notes on Programming in C",
+          "url": "https://www.lysator.liu.se/c/pikestyle.html"
+        },
+        {
+          "title": "Go Proverbs",
+          "url": "https://go-proverbs.github.io/"
+        }
+      ]
+    },
+    {
+      "name": "systems/cantrill-observability-first",
+      "path": "systems/cantrill-observability-first/SKILL.md",
+      "category": "systems",
+      "author": "Bryan Cantrill",
+      "triggers": [
+        "observability-first",
+        "dtrace-architecture",
+        "zero-overhead-probing",
+        "mechanical-sympathy",
+        "platform-values",
+        "production-debuggability"
+      ],
+      "conflicts_with": [
+        "types/king-type-driven-design"
+      ],
+      "primary_sources": [
+        {
+          "title": "Forked: A Decade of DTrace",
+          "url": "https://www.youtube.com/watch?v=l6XQU9NP74A"
+        },
+        {
+          "title": "Platform as a Reflection of Values",
+          "url": "https://queue.acm.org/detail.cfm?id=3329585"
+        }
+      ]
+    },
+    {
+      "name": "systems/bellard-autonomous-engine",
+      "path": "systems/bellard-autonomous-engine/SKILL.md",
+      "category": "systems",
+      "author": "Fabrice Bellard",
+      "triggers": [
+        "autonomous-engine",
+        "zero-external-dependencies",
+        "single-pass-execution",
+        "compact-c-architecture",
+        "quickjs-tcc-style",
+        "micro-runtime"
+      ],
+      "conflicts_with": [
+        "architecture/fowler-evolutionary-design",
+        "architecture/uncle-bob-solid-orthodox"
+      ],
+      "primary_sources": [
+        {
+          "title": "QuickJS Architecture",
+          "url": "https://bellard.org/quickjs/"
+        },
+        {
+          "title": "TinyCC (tcc) Implementation Overview",
+          "url": "https://bellard.org/tcc/"
+        }
+      ]
+    },
+    {
+      "name": "resilience/armstrong-fault-isolation",
+      "path": "resilience/armstrong-fault-isolation/SKILL.md",
+      "category": "resilience",
+      "author": "Joe Armstrong",
+      "triggers": [
+        "let-it-crash",
+        "actor-isolation",
+        "supervisor-tree",
+        "share-nothing",
+        "erlang-otp",
+        "fault-tolerance"
+      ],
+      "conflicts_with": [
+        "systems/stenberg-defensive-c",
+        "formal/lamport-state-invariants"
+      ],
+      "primary_sources": [
+        {
+          "title": "Making Reliable Distributed Systems in the Presence of Software Errors",
+          "url": "https://erlang.org/download/armstrong_thesis_2003.pdf"
+        },
+        {
+          "title": "Systems That Run Forever",
+          "url": "https://web.archive.org/web/20210224190757/http://armstrongonsoftware.blogspot.com/2006/08/systems-that-run-forever-wishes-for.html"
+        }
+      ]
+    },
+    {
+      "name": "performance/muratori-data-oriented",
+      "path": "performance/muratori-data-oriented/SKILL.md",
+      "category": "performance",
+      "author": "Casey Muratori",
+      "triggers": [
+        "data-oriented-design",
+        "clean-code-critique",
+        "recompute-everything",
+        "cache-locality",
+        "simd-vectorization",
+        "hot-path"
+      ],
+      "conflicts_with": [
+        "architecture/fowler-evolutionary-design",
+        "systems/stenberg-defensive-c",
+        "architecture/uncle-bob-solid-orthodox"
+      ],
+      "primary_sources": [
+        {
+          "title": "Clean Code, Horrible Performance",
+          "url": "https://www.computerenhance.com/p/clean-code-horrible-performance"
+        },
+        {
+          "title": "Recompute Everything (Alternative to Caching)",
+          "url": "https://www.computerenhance.com/p/recompute-everything-or-how-to-go"
+        }
+      ]
+    },
+    {
+      "name": "performance/danluu-empirical-systems",
+      "path": "performance/danluu-empirical-systems/SKILL.md",
+      "category": "performance",
+      "author": "Dan Luu",
+      "triggers": [
+        "empirical-systems",
+        "crash-consistency",
+        "tail-latency",
+        "tracing-vs-sampling",
+        "hardware-reality",
+        "fsync-durability"
+      ],
+      "conflicts_with": [
+        "architecture/fowler-evolutionary-design",
+        "architecture/dhh-majestic-monolith"
+      ],
+      "primary_sources": [
+        {
+          "title": "Filesystem Crash Consistency",
+          "url": "https://danluu.com/file-consistency/"
+        },
+        {
+          "title": "Terminal Latency Across Generations",
+          "url": "https://danluu.com/term-latency/"
+        },
+        {
+          "title": "Performance Tracing & Profiling",
+          "url": "https://danluu.com/perf-tracing/"
+        }
+      ]
+    },
+    {
+      "name": "performance/carmack-inlined-execution",
+      "path": "performance/carmack-inlined-execution/SKILL.md",
+      "category": "performance",
+      "author": "John Carmack",
+      "triggers": [
+        "inlined-execution",
+        "polled-simulation-loop",
+        "forward-only-control-flow",
+        "functional-cpp",
+        "state-mutation-elimination",
+        "linear-code-flow"
+      ],
+      "conflicts_with": [
+        "architecture/fowler-evolutionary-design",
+        "architecture/uncle-bob-solid-orthodox"
+      ],
+      "primary_sources": [
+        {
+          "title": "Inlined Code vs Deep Call Stacks",
+          "url": "http://number-none.com/blow/blog/programming/2014/09/26/carmack-on-inlined-code.html"
+        },
+        {
+          "title": "Functional Programming in C++",
+          "url": "https://raw.githubusercontent.com/ESWAT/john-carmack-plan-archive/master/by_year/plan_2013.txt"
+        }
+      ]
+    },
+    {
+      "name": "formal/lamport-state-invariants",
+      "path": "formal/lamport-state-invariants/SKILL.md",
+      "category": "formal",
+      "author": "Leslie Lamport",
+      "triggers": [
+        "formal-verification",
+        "inductive-invariants",
+        "logical-clocks",
+        "state-machine-replication",
+        "safety-liveness",
+        "tla-plus"
+      ],
+      "conflicts_with": [
+        "resilience/armstrong-fault-isolation",
+        "architecture/fowler-evolutionary-design"
+      ],
+      "primary_sources": [
+        {
+          "title": "Time, Clocks, and the Ordering of Events in a Distributed System",
+          "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf"
+        },
+        {
+          "title": "Computation and State Machines",
+          "url": "https://lamport.azurewebsites.net/pubs/state-machine.pdf"
+        }
+      ]
+    },
+    {
+      "name": "security/djb-isolated-privilege",
+      "path": "security/djb-isolated-privilege/SKILL.md",
+      "category": "security",
+      "author": "Daniel J. Bernstein",
+      "triggers": [
+        "radical-privilege-separation",
+        "micro-binaries",
+        "bug-elimination",
+        "daemontools",
+        "qmail-architecture",
+        "zero-root-daemons"
+      ],
+      "conflicts_with": [
+        "systems/stenberg-defensive-c",
+        "architecture/dhh-majestic-monolith"
+      ],
+      "primary_sources": [
+        {
+          "title": "Thoughts on Security After Ten Years of qmail",
+          "url": "https://cr.yp.to/qmail/qmail-sec-20071101.pdf"
+        },
+        {
+          "title": "Some Thoughts on Systems and Daemons",
+          "url": "https://cr.yp.to/daemontools.html"
+        }
+      ]
+    },
+    {
+      "name": "distributed/kleppmann-data-contracts",
+      "path": "distributed/kleppmann-data-contracts/SKILL.md",
+      "category": "distributed",
+      "author": "Martin Kleppmann",
+      "triggers": [
+        "append-only-log",
+        "crdt-convergence",
+        "unbundled-databases",
+        "schema-evolution",
+        "derived-views",
+        "event-driven-contracts"
+      ],
+      "conflicts_with": [
+        "architecture/dhh-majestic-monolith",
+        "state/hickey-simple-values"
+      ],
+      "primary_sources": [
+        {
+          "title": "Designing Data-Intensive Applications (Summary & Core Invariants)",
+          "url": "https://dataintensive.net/"
+        },
+        {
+          "title": "Conflict-Free Replicated Data Types (CRDTs)",
+          "url": "https://arxiv.org/abs/1907.03960"
+        }
+      ]
+    },
+    {
+      "name": "types/king-type-driven-design",
+      "path": "types/king-type-driven-design/SKILL.md",
+      "category": "types",
+      "author": "Alexis King",
+      "triggers": [
+        "parse-dont-validate",
+        "type-driven-design",
+        "make-illegal-states-unrepresentable",
+        "types-as-axioms",
+        "algebraic-data-types",
+        "compile-time-proofs"
+      ],
+      "conflicts_with": [
+        "systems/pike-unix-minimalism",
+        "systems/antirez-pragmatic-c",
+        "systems/cantrill-observability-first"
+      ],
+      "primary_sources": [
+        {
+          "title": "Parse, Don't Validate",
+          "url": "https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/"
+        },
+        {
+          "title": "Types as Axioms",
+          "url": "https://lexi-lambda.github.io/blog/2020/08/13/types-as-axioms-or-playing-god-with-ghc/"
+        }
+      ]
+    },
+    {
+      "name": "architecture/ousterhout-deep-modules",
+      "path": "architecture/ousterhout-deep-modules/SKILL.md",
+      "category": "architecture",
+      "author": "John Ousterhout",
+      "triggers": [
+        "deep-modules",
+        "information-hiding",
+        "classitis",
+        "pass-through-methods",
+        "define-errors-out-of-existence",
+        "complexity-reduction"
+      ],
+      "conflicts_with": [
+        "architecture/fowler-evolutionary-design",
+        "systems/pike-unix-minimalism",
+        "architecture/uncle-bob-solid-orthodox"
+      ],
+      "primary_sources": [
+        {
+          "title": "Deep Modules & Complexity Lectures",
+          "url": "https://web.stanford.edu/~ouster/cgi-bin/cs190-spring20/lecture.php?topic=modularDesign"
+        },
+        {
+          "title": "Red Flags in Software Design",
+          "url": "https://web.stanford.edu/~ouster/cgi-bin/cs190-spring20/lecture.php?topic=redFlags"
+        }
+      ]
+    },
+    {
+      "name": "architecture/fowler-evolutionary-design",
+      "path": "architecture/fowler-evolutionary-design/SKILL.md",
+      "category": "architecture",
+      "author": "Martin Fowler",
+      "triggers": [
+        "evolutionary-architecture",
+        "refactoring",
+        "monolith-first",
+        "poeaa-patterns",
+        "yagni",
+        "bounded-context"
+      ],
+      "conflicts_with": [
+        "performance/muratori-data-oriented",
+        "architecture/ousterhout-deep-modules",
+        "performance/carmack-inlined-execution"
+      ],
+      "primary_sources": [
+        {
+          "title": "Catalog of Enterprise Architecture Patterns",
+          "url": "https://martinfowler.com/eaaCatalog/"
+        },
+        {
+          "title": "MonolithFirst Pattern",
+          "url": "https://martinfowler.com/bliki/MonolithFirst.html"
+        }
+      ]
+    },
+    {
+      "name": "architecture/dhh-majestic-monolith",
+      "path": "architecture/dhh-majestic-monolith/SKILL.md",
+      "category": "architecture",
+      "author": "David Heinemeier Hansson",
+      "triggers": [
+        "majestic-monolith",
+        "active-record",
+        "system-testing",
+        "cloud-exit",
+        "omakase",
+        "full-stack-framework"
+      ],
+      "conflicts_with": [
+        "performance/danluu-empirical-systems",
+        "security/djb-isolated-privilege",
+        "distributed/kleppmann-data-contracts"
+      ],
+      "primary_sources": [
+        {
+          "title": "The Majestic Monolith",
+          "url": "https://signalvnoise.com/svn3/the-majestic-monolith/"
+        },
+        {
+          "title": "TDD is dead. Long live testing",
+          "url": "https://dhh.dk/2014/tdd-is-dead-long-live-testing.html"
+        },
+        {
+          "title": "Why We Are Leaving the Cloud",
+          "url": "https://world.hey.com/dhh/why-we-are-leaving-the-cloud-650fba4e"
+        }
+      ]
+    },
+    {
+      "name": "architecture/uncle-bob-solid-orthodox",
+      "path": "architecture/uncle-bob-solid-orthodox/SKILL.md",
+      "category": "architecture",
+      "author": "Robert C. Martin (Uncle Bob)",
+      "triggers": [
+        "clean-architecture",
+        "the-dependency-rule",
+        "solid-principles",
+        "cycles-of-tdd",
+        "use-cases-interactors",
+        "craftsmanship"
+      ],
+      "conflicts_with": [
+        "performance/muratori-data-oriented",
+        "architecture/ousterhout-deep-modules",
+        "architecture/dhh-majestic-monolith",
+        "performance/carmack-inlined-execution"
+      ],
+      "primary_sources": [
+        {
+          "title": "Clean Architecture (The Clean Code Blog)",
+          "url": "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"
+        },
+        {
+          "title": "The Cycles of TDD",
+          "url": "https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html"
+        }
+      ]
+    },
+    {
+      "name": "state/hickey-simple-values",
+      "path": "state/hickey-simple-values/SKILL.md",
+      "category": "state",
+      "author": "Rich Hickey",
+      "triggers": [
+        "simple-made-easy",
+        "value-semantics",
+        "persistent-data-structures",
+        "epochal-state",
+        "uncomplecting",
+        "immutability"
+      ],
+      "conflicts_with": [
+        "systems/antirez-pragmatic-c",
+        "architecture/fowler-evolutionary-design",
+        "distributed/kleppmann-data-contracts"
+      ],
+      "primary_sources": [
+        {
+          "title": "Simple Made Easy (Full Transcript)",
+          "url": "https://raw.githubusercontent.com/matthiasn/talk-transcripts/master/Hickey_Rich/SimpleMadeEasy.md"
+        },
+        {
+          "title": "The Value of Values (Full Transcript)",
+          "url": "https://raw.githubusercontent.com/matthiasn/talk-transcripts/master/Hickey_Rich/ValueValues.md"
+        }
+      ]
+    }
+  ],
+  "conflict_matrix": {
+    "muratori-data-oriented vs fowler-evolutionary-design": {
+      "tension": "Hardware Mechanical Sympathy vs Enterprise Domain Model Abstractions",
+      "thesis_a": {
+        "skill": "performance/muratori-data-oriented",
+        "position": "Virtual function dispatch, polymorphic class hierarchies, and layered repository/data-mapper indirections destroy CPU cache locality, prevent compiler inlining and SIMD vectorization, and result in 15x-25x performance degradation. Code should be organized around contiguous memory layouts and concrete transformational loops."
+      },
+      "thesis_b": {
+        "skill": "architecture/fowler-evolutionary-design",
+        "position": "Enterprise domain patterns, repositories, and refactoring to clean abstractions isolate business logic, support testability, and allow agile teams to evolve complex domain rules without breaking production invariants. Premature low-level data packing harms maintainability and team velocity."
+      },
+      "resolution_guidance": "In high-frequency hot paths, numerical inner loops, graphics, and real-time processing pipelines, Casey Muratori's data-oriented design is mandatory. In high-complexity business domains, workflow orchestration, and user CRUD enterprise logic, Martin Fowler's evolutionary design patterns should take precedence."
+    },
+    "ousterhout-deep-modules vs fowler-evolutionary-design": {
+      "tension": "Deep Modules (Thick Classes) vs Granular Class/Method Refactoring",
+      "thesis_a": {
+        "skill": "architecture/ousterhout-deep-modules",
+        "position": "Modules must maximize functionality relative to interface complexity. Splitting logic into dozens of tiny classes and micro-methods leads to 'Classitis', shallow modules, pass-through methods, and massive cognitive overhead because the interface cost rivals the implementation value."
+      },
+      "thesis_b": {
+        "skill": "architecture/fowler-evolutionary-design",
+        "position": "Classes and methods should be continuously refactored into small, single-responsibility units. Small methods are easier to name expressively, easier to test in isolation, and easier to reuse across enterprise services."
+      },
+      "resolution_guidance": "Favor Ousterhout's deep modules for public subsystem interfaces, API boundaries, and core modules to keep cognitive load low. Apply Fowler's extract-method refactoring internally within a deep module when private logic requires decomposition without leaking new types into the public interface."
+    },
+    "armstrong-fault-isolation vs stenberg-defensive-c": {
+      "tension": "Share-Nothing 'Let It Crash' vs Defensive Error Handling and Never Abort",
+      "thesis_a": {
+        "skill": "resilience/armstrong-fault-isolation",
+        "position": "Defensive programming inside workers clutters normal-case code, conceals bugs, and leaves state corrupted. Workers should only handle the happy path, crash immediately on invariant violations, and let external supervisor trees cleanly restart them."
+      },
+      "thesis_b": {
+        "skill": "systems/stenberg-defensive-c",
+        "position": "A shared C library executing inside an unknown third-party host process must NEVER crash, abort, or panic. Every error, invalid input, and allocation failure must be caught defensively and returned as a typed error code enum."
+      },
+      "resolution_guidance": "Apply Armstrong's actor-isolated supervisor model when operating in an asynchronous distributed runtime with process memory isolation (e.g., Erlang, Elixir, Akka, micro-containers). Enforce Stenberg's defensive error propagation when writing embedded systems, C/C++ libraries, or shared in-process binaries where an unhandled crash takes down the entire operating system process."
+    },
+    "dhh-majestic-monolith vs Microservices / Cloud-Native paradigms": {
+      "tension": "Majestic Monolith & Hardware Ownership vs Distributed Microservices & Cloud-Native Topology",
+      "thesis_a": {
+        "skill": "architecture/dhh-majestic-monolith",
+        "position": "A single monolithic application sharing a primary database gives small teams immense leverage, zero network latency between modules, simple ACID transactions, and eliminates the multi-million-dollar cloud markup and operational overhead of microservices."
+      },
+      "thesis_b": {
+        "skill": "Cloud-Native / Microservices Paradigm",
+        "position": "Splitting applications into decoupled microservices allows thousands of engineers across large enterprises to deploy code independently without merge bottlenecks, scale heterogeneous workloads individually, and isolate technological lifecycles."
+      },
+      "resolution_guidance": "Enforce DHH's Majestic Monolith for early-stage products, startups, small-to-medium teams (<100 engineers), and applications with unified transactional domains. Only consider microservice extraction when distinct organizational units cannot coordinate deployments or specific services have fundamentally divergent hardware requirements (e.g., GPU model inference vs relational web app)."
+    },
+    "hickey-simple-values vs OOP mutable encapsulation": {
+      "tension": "Immutable Value Semantics & Epochal State vs Mutable In-Place Encapsulation (PLOP)",
+      "thesis_a": {
+        "skill": "state/hickey-simple-values",
+        "position": "Place-Oriented Programming (mutating memory in place) complects value and time, destroys historical facts, causes race conditions, and requires defensive copying and locks. State should be an identity reference pointing to immutable persistent data structures over time."
+      },
+      "thesis_b": {
+        "skill": "OOP Mutable Encapsulation",
+        "position": "In-place mutation maps directly to Von Neumann computer hardware, avoids garbage collection overhead and persistent tree node allocations, and encapsulates mutable state transitions behind strict method boundaries."
+      },
+      "resolution_guidance": "Adopt Hickey's immutable values for domain information models, distributed event data, concurrent application state, and business logic pipelines where race conditions and auditability are paramount. Confine mutable in-place structures to tight local optimization loops, scratch buffers, or low-level device drivers where allocations must be strictly zero."
+    },
+    "uncle-bob-solid-orthodox vs muratori-data-oriented": {
+      "tension": "Dynamic Polymorphic Layers vs Cache-Aligned CPU Memory",
+      "thesis_a": {
+        "skill": "architecture/uncle-bob-solid-orthodox",
+        "position": "Business domain policies must be strictly decoupled from low-level execution details through polymorphic interfaces and Dependency Inversion (DIP). Encapsulating variations in polymorphic classes satisfies the Open-Closed Principle and maximizes unit-test isolation."
+      },
+      "thesis_b": {
+        "skill": "performance/muratori-data-oriented",
+        "position": "Dynamic polymorphic dispatch (vtables) and individual heap allocations create pointer indirection, cache misses, and prevent compiler inlining and SIMD autovectorization, causing 15x-25x performance degradation. Code should be structured around contiguous data layouts and concrete loop transforms."
+      },
+      "resolution_guidance": "Apply Muratori's data-oriented design on hot computational loops, rendering passes, audio synthesis, and high-frequency network packets where CPU hardware saturation is required. Apply Uncle Bob's SOLID polymorphism across coarse architectural boundaries (e.g., plugin interfaces, third-party payment adapters, storage gateways) where team isolation and decoupling outweigh instruction-cycle costs."
+    },
+    "uncle-bob-solid-orthodox vs ousterhout-deep-modules": {
+      "tension": "Granular Micro-Methods & Single-Responsibility vs Deep Encapsulated Interfaces",
+      "thesis_a": {
+        "skill": "architecture/uncle-bob-solid-orthodox",
+        "position": "Functions should do one thing, do it well, and be exceptionally small (ideally 4-10 lines). Decomposing code into small single-responsibility classes and methods clarifies intent, promotes unit testability, and prevents coupling."
+      },
+      "thesis_b": {
+        "skill": "architecture/ousterhout-deep-modules",
+        "position": "Decomposing logic into tiny classes produces 'Classitis' and shallow modules where interface complexity rivals implementation complexity. Pass-through methods proliferate, and understanding a system requires navigating dozens of fragmented files, multiplying cognitive overhead."
+      },
+      "resolution_guidance": "Keep public module interfaces deep (a small, clean interface hiding rich functionality) as prescribed by Ousterhout. Internally within the module implementation, apply Uncle Bob's single-responsibility decomposition for private sub-tasks only when it enhances clarity without creating pass-through methods or leaking intermediate state."
+    },
+    "djb-isolated-privilege vs stenberg-defensive-c": {
+      "tension": "OS-Level Privilege Drop & Micro-Binaries vs Internal Defensive Pointer Management",
+      "thesis_a": {
+        "skill": "security/djb-isolated-privilege",
+        "position": "Security cannot rely on programmers writing bug-free defensive code in a single process. Total security requires radical multi-process privilege separation, dropping root immediately, and executing small, single-purpose micro-binaries with distinct UNIX UIDs communicating via standard pipes."
+      },
+      "thesis_b": {
+        "skill": "systems/stenberg-defensive-c",
+        "position": "A shared C library operates within a host application's address space where spawning separate processes is impossible. Security and reliability require defensive C programming: checking every return code (CURLcode), safe-free pointer nullification, and non-terminating graceful error handling."
+      },
+      "resolution_guidance": "Use DJB's multi-process privilege separation and micro-binary architecture when designing standalone network daemons, operating system services, or secure infrastructure tooling. Enforce Stenberg's defensive error code propagation and safe-free discipline when building embeddable libraries, shared objects (/), or in-process modules that cannot dictate process topology."
+    },
+    "king-type-driven-design vs pike-unix-minimalism": {
+      "tension": "Algebraic Compile-Time Type Proofs vs Raw Byte Slices & Loose Interfaces",
+      "thesis_a": {
+        "skill": "types/king-type-driven-design",
+        "position": "Systems must 'Parse, don't validate' at boundaries, capturing invariants in rich algebraic data types so illegal states become unrepresentable at compile time. Relying on raw primitives and loose interfaces causes shotgun parsing and runtime panics."
+      },
+      "thesis_b": {
+        "skill": "systems/pike-unix-minimalism",
+        "position": "'The bigger the interface, the weaker the abstraction' and 'Clear is better than clever'. Complex type systems and algebraic hierarchies create cognitive friction; simple programs should center on raw byte streams (), simple data structures (arrays, maps), and small orthogonal primitives."
+      },
+      "resolution_guidance": "Apply King's type-driven design at application input boundaries and domain modeling where invalid states carry high business or security risk (e.g., authorization rules, payment transactions, protocol framing). Apply Pike's minimalism in low-level I/O pipelines, text processing, CLI utilities, and systems plumbing where data is naturally a stream of bytes."
+    },
+    "lamport-state-invariants vs armstrong-fault-isolation": {
+      "tension": "Mathematical State Validation Before Execution vs Reactive Supervision Trees",
+      "thesis_a": {
+        "skill": "formal/lamport-state-invariants",
+        "position": "Systems must be formally modeled as discrete state machines with mathematical inductive invariants proven upfront. Concurrent algorithms cannot be verified through runtime testing or reactive error recovery; correctness requires formal ordering and invariant preservation."
+      },
+      "thesis_b": {
+        "skill": "resilience/armstrong-fault-isolation",
+        "position": "Software will inevitably have bugs and hardware will experience unforeseen faults in real-world distributed networks. Trying to prove complete correctness upfront is futile; systems must isolate processes into share-nothing heaps, 'let it crash' on errors, and recover via supervisor hierarchies."
+      },
+      "resolution_guidance": "Use Lamport's formal invariants and logical clock ordering when designing core consensus protocols, distributed replication engines, or critical state-transition kernels where a bug causes unrecoverable split-brain corruption. Use Armstrong's supervisor hierarchies and crash isolation for high-volume operational workflows and network session management where partial transient failures are normal."
+    },
+    "carmack-inlined-execution vs fowler-evolutionary-design": {
+      "tension": "Inline Execution Without Indirection vs Extracted Helper Methods & Evolutionary Layers",
+      "thesis_a": {
+        "skill": "performance/carmack-inlined-execution",
+        "position": "Sequential execution pipelines should be inlined top-to-bottom within the primary frame/tick loop. Splitting linear code into dozens of single-call helper methods conceals variable lifetimes, introduces mental call-stack jumping, and hides accidental state mutations."
+      },
+      "thesis_b": {
+        "skill": "architecture/fowler-evolutionary-design",
+        "position": "Code must be continuously refactored into small, cleanly named extracted methods and enterprise patterns. Small, focused methods allow evolutionary design, simplify unit testing, and enable agile teams to safely adapt code over long product lifetimes."
+      },
+      "resolution_guidance": "In real-time simulation loops, game engines, physics updates, and deterministic embedded controllers, follow Carmack's top-to-bottom inlined execution to eliminate hidden state mutation and call-stack jumping. In enterprise business services, user workflow orchestration, and web backends, follow Fowler's extracted method refactoring to maximize team maintainability and domain testability."
+    }
+  }
+}
