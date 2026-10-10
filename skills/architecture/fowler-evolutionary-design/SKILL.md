@@ -2,7 +2,7 @@
 name: fowler-evolutionary-design
 description: "Evolutionary software architecture discipline driven by continuous refactoring, comprehensive automated testing, YAGNI, MonolithFirst strategy, and enterprise data patterns."
 triggers: ["evolutionary-architecture", "refactoring", "monolith-first", "poeaa-patterns", "yagni", "bounded-context"]
-conflicts_with: ["performance/muratori-data-oriented", "architecture/ousterhout-deep-modules"]
+conflicts_with: ["performance/muratori-data-oriented", "architecture/ousterhout-deep-modules", "performance/carmack-inlined-execution"]
 primary_sources:
   - title: "Catalog of Enterprise Architecture Patterns"
     url: "https://martinfowler.com/eaaCatalog/"

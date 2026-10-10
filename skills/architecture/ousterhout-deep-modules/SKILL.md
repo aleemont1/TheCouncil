@@ -2,7 +2,7 @@
 name: ousterhout-deep-modules
 description: "Software design methodology maximizing the ratio of functionality provided to interface complexity, championing deep modules, information hiding, and defining errors out of existence while rejecting shallow classitis and pass-through methods."
 triggers: ["deep-modules", "information-hiding", "classitis", "pass-through-methods", "define-errors-out-of-existence", "complexity-reduction"]
-conflicts_with: ["architecture/fowler-evolutionary-design", "systems/pike-unix-minimalism"]
+conflicts_with: ["architecture/fowler-evolutionary-design", "systems/pike-unix-minimalism", "architecture/uncle-bob-solid-orthodox"]
 primary_sources:
   - title: "Deep Modules & Complexity Lectures"
     url: "https://web.stanford.edu/~ouster/cgi-bin/cs190-spring20/lecture.php?topic=modularDesign"

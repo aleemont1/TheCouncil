@@ -2,7 +2,7 @@
 name: stenberg-defensive-c
 description: "Defensive systems programming discipline adhering to strict C89 portability, warning-free cross-compilation, explicit error code propagation, state-machine protocol parsing, and disciplined vulnerability lifecycle."
 triggers: ["defensive-c", "libcurl-style", "cross-platform-portability", "c89-compliance", "vulnerability-lifecycle", "protocol-state-machine"]
-conflicts_with: ["resilience/armstrong-fault-isolation", "performance/muratori-data-oriented"]
+conflicts_with: ["resilience/armstrong-fault-isolation", "performance/muratori-data-oriented", "security/djb-isolated-privilege"]
 primary_sources:
   - title: "HTTP/3 Explained"
     url: "https://http3-explained.haxx.se/"

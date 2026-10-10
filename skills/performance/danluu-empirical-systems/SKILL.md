@@ -2,7 +2,7 @@
 name: danluu-empirical-systems
 description: "Empirical software engineering methodology relying on real-world measurements, crash-consistency verification, latency distribution analysis, off-CPU tracing, and skepticism toward POSIX and vendor abstractions."
 triggers: ["empirical-systems", "crash-consistency", "tail-latency", "tracing-vs-sampling", "hardware-reality", "fsync-durability"]
-conflicts_with: ["architecture/fowler-evolutionary-design"]
+conflicts_with: ["architecture/fowler-evolutionary-design", "architecture/dhh-majestic-monolith"]
 primary_sources:
   - title: "Filesystem Crash Consistency"
     url: "https://danluu.com/file-consistency/"

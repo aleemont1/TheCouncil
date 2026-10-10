@@ -2,7 +2,7 @@
 name: armstrong-fault-isolation
 description: "Resilience engineering architecture founded on share-nothing process isolation, 'let it crash' fail-fast semantics, hierarchical supervisor trees, and asynchronous message passing."
 triggers: ["let-it-crash", "actor-isolation", "supervisor-tree", "share-nothing", "erlang-otp", "fault-tolerance"]
-conflicts_with: ["systems/stenberg-defensive-c"]
+conflicts_with: ["systems/stenberg-defensive-c", "formal/lamport-state-invariants"]
 primary_sources:
   - title: "Making Reliable Distributed Systems in the Presence of Software Errors"
     url: "https://erlang.org/download/armstrong_thesis_2003.pdf"

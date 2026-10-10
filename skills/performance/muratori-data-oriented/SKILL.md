@@ -2,7 +2,7 @@
 name: muratori-data-oriented
 description: "Mechanical sympathy and data-oriented design discipline rejecting 'Clean Code' abstractions, virtual method tables, and defensive caching in favor of contiguous cache locality, table-driven switch dispatch, SIMD vectorization, and on-demand recomputation."
 triggers: ["data-oriented-design", "clean-code-critique", "recompute-everything", "cache-locality", "simd-vectorization", "hot-path"]
-conflicts_with: ["architecture/fowler-evolutionary-design", "systems/stenberg-defensive-c"]
+conflicts_with: ["architecture/fowler-evolutionary-design", "systems/stenberg-defensive-c", "architecture/uncle-bob-solid-orthodox"]
 primary_sources:
   - title: "Clean Code, Horrible Performance"
     url: "https://www.computerenhance.com/p/clean-code-horrible-performance"

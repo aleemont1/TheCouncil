@@ -2,7 +2,7 @@
 name: uncle-bob-solid-orthodox
 description: "Orthodox software craftsmanship paradigm enforcing The Dependency Rule, concentric architectural layers, strict SOLID principles, dynamic polymorphism for boundary crossing, and Red-Green-Refactor TDD cycles."
 triggers: ["clean-architecture", "the-dependency-rule", "solid-principles", "cycles-of-tdd", "use-cases-interactors", "craftsmanship"]
-conflicts_with: ["performance/muratori-data-oriented", "architecture/ousterhout-deep-modules", "architecture/dhh-majestic-monolith"]
+conflicts_with: ["performance/muratori-data-oriented", "architecture/ousterhout-deep-modules", "architecture/dhh-majestic-monolith", "performance/carmack-inlined-execution"]
 primary_sources:
   - title: "Clean Architecture (The Clean Code Blog)"
     url: "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"

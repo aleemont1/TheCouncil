@@ -2,7 +2,7 @@
 name: dhh-majestic-monolith
 description: "Pragmatic full-stack web architecture advocating single-codebase monolithic applications, integrated Active Record modeling, server-driven UI, bare-metal server deployment, and system integration testing over unit-test fundamentalism."
 triggers: ["majestic-monolith", "active-record", "system-testing", "cloud-exit", "omakase", "full-stack-framework"]
-conflicts_with: ["performance/danluu-empirical-systems"]
+conflicts_with: ["performance/danluu-empirical-systems", "security/djb-isolated-privilege", "distributed/kleppmann-data-contracts"]
 primary_sources:
   - title: "The Majestic Monolith"
     url: "https://signalvnoise.com/svn3/the-majestic-monolith/"

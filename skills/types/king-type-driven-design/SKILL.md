@@ -2,7 +2,7 @@
 name: king-type-driven-design
 description: "Type-driven software design discipline converting untyped data into rich compile-time types at boundaries ('Parse, Don't Validate'), making illegal states unrepresentable, and treating static types as generative axioms."
 triggers: ["parse-dont-validate", "type-driven-design", "make-illegal-states-unrepresentable", "types-as-axioms", "algebraic-data-types", "compile-time-proofs"]
-conflicts_with: ["systems/pike-unix-minimalism", "systems/antirez-pragmatic-c"]
+conflicts_with: ["systems/pike-unix-minimalism", "systems/antirez-pragmatic-c", "systems/cantrill-observability-first"]
 primary_sources:
   - title: "Parse, Don't Validate"
     url: "https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/"

@@ -2,7 +2,7 @@
 name: hickey-simple-values
 description: "Architectural paradigm grounding software in immutable values, epochal time modeling, persistent data structures, and uncomplected simplicity over Place-Oriented Programming (PLOP) and mutable OOP state."
 triggers: ["simple-made-easy", "value-semantics", "persistent-data-structures", "epochal-state", "uncomplecting", "immutability"]
-conflicts_with: ["systems/antirez-pragmatic-c", "architecture/fowler-evolutionary-design"]
+conflicts_with: ["systems/antirez-pragmatic-c", "architecture/fowler-evolutionary-design", "distributed/kleppmann-data-contracts"]
 primary_sources:
   - title: "Simple Made Easy (Full Transcript)"
     url: "https://raw.githubusercontent.com/matthiasn/talk-transcripts/master/Hickey_Rich/SimpleMadeEasy.md"
