@@ -152,7 +152,7 @@ When generating, refactoring, or reviewing code in this repository:
 
 ## Offline / Local Installation Utility
 
-If working in an air-gapped environment or if you prefer a standalone local symlink/copy from a cloned repository, the repository includes [`scripts/install.sh`](file:///home/aleemont/TheCouncil/scripts/install.sh):
+If working in an air-gapped environment or if you prefer a standalone local symlink/copy from a cloned repository, the repository includes [`scripts/install.sh`](./scripts/install.sh):
 
 ```bash
 # Clone the repository
@@ -184,4 +184,4 @@ Once installed via any of the methods above, verify that your agent recognizes t
    > *"Run a Dialectic Tribunal on my parser using Casey Muratori (performance/muratori-data-oriented) vs Alexis King (types/king-type-driven-design)."*
 
 3. **Check skill registry**:
-   All 18 seats and the Chancellor router are cataloged with triggers and conflict pairs in [`skills/registry.json`](file:///home/aleemont/TheCouncil/skills/registry.json).
+   All 18 seats and the Chancellor router are cataloged with triggers and conflict pairs in [`skills/registry.json`](./skills/registry.json).

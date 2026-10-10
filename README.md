@@ -1,12 +1,32 @@
 # TheCouncil
 
-> Dialectic AI Engineering Lenses & High-Constraint Skills for Autonomous Coding Agents.
+> Your AI coding agent writes enterprise-brained boilerplate. Make 18 legendary engineers argue about it instead.
 
-`TheCouncil` is an open-source, modular repository of engineering constraints and dialectic code-review lenses designed for autonomous coding agents (Claude Code, Antigravity CLI, Cursor, Aider).
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-8A2BE2)](https://agentskills.io)
+![Works with](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Cursor%20%7C%20Gemini%20CLI%20%7C%20Copilot-informational)
 
-Frontier LLMs inherently suffer from **regression to the mean**. Shaped by massive general-purpose training corpora and conversational alignment (RLHF), they default to safe, generic enterprise patterns: superficial object hierarchies, defensive try/catch wrapping around ordinary logic, tiny fragmented pass-through functions, dynamic dispatch on execution hot-paths, and continuous heap allocations.
+LLMs regress to the mean: pass-through wrappers, try/catch around everything, virtual dispatch in hot loops. TheCouncil installs **non-negotiable engineering lenses** (Carmack, Lamport, Muratori, Ousterhout, Pike, ...) that override those defaults, and a **Dialectic Tribunal** that pits two irreconcilable philosophies against each other on your code.
 
-`TheCouncil` overrides these tendencies by injecting non-negotiable operational invariants distilled directly from the primary writings, benchmark studies, and production codebases of 18 foundational figures in computer systems, architecture, and engineering philosophy.
+## 30-second demo
+
+```bash
+npx skills add aleemont1/TheCouncil        # auto-detects your agent
+```
+
+```text
+> Run a Dialectic Tribunal on src/engine/tick.rs:
+  Lens A: performance/muratori-data-oriented
+  Lens B: architecture/uncle-bob-solid-orthodox
+```
+
+You get two uncompromising independent audits and a trade-off matrix, not a bland consensus.
+
+---
+
+## What's inside
+
+`TheCouncil` is an open-source, modular set of engineering constraints and dialectic code-review lenses for autonomous coding agents (Claude Code, Antigravity CLI, Cursor, Aider). Each lens is distilled from the primary writings, benchmarks, and production codebases of 18 foundational figures in systems, architecture, and engineering philosophy. Lenses are inspired by, and not affiliated with or endorsed by, the people named.
 
 ---
 
@@ -101,7 +121,7 @@ Stack complementary skills across orthogonal layers of abstraction to take a fea
 
 TheCouncil supports the standard AI agent installation paradigms: **`npx skills`** (auto-detects Cursor, Claude Code, Antigravity, Copilot, etc.) and **direct GitHub repository marketplace integration** (Claude Code `/plugin marketplace add` and Antigravity `agy plugin install`).
 
-See the full [**Installation Guide (`INSTALL.md`)**](file:///home/aleemont/TheCouncil/INSTALL.md) for complete details.
+See the full [**Installation Guide (`INSTALL.md`)**](./INSTALL.md) for complete details.
 
 ### 1. Universal Install via `npx skills` (All Agents)
 
