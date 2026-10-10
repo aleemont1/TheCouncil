@@ -1,5 +1,5 @@
 ---
-name: "resilience/armstrong-fault-isolation"
+name: armstrong-fault-isolation
 description: "Resilience engineering architecture founded on share-nothing process isolation, 'let it crash' fail-fast semantics, hierarchical supervisor trees, and asynchronous message passing."
 triggers: ["let-it-crash", "actor-isolation", "supervisor-tree", "share-nothing", "erlang-otp", "fault-tolerance"]
 conflicts_with: ["systems/stenberg-defensive-c"]

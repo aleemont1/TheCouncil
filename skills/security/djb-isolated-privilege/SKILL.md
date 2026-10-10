@@ -1,5 +1,5 @@
 ---
-name: "security/djb-isolated-privilege"
+name: djb-isolated-privilege
 description: "Security architecture discipline enforcing elimination of trusted code, radical multi-process privilege separation, tiny single-purpose micro-binaries, supervised foreground execution, and replacing library complexity with simple OS process boundaries."
 triggers: ["radical-privilege-separation", "micro-binaries", "bug-elimination", "daemontools", "qmail-architecture", "zero-root-daemons"]
 conflicts_with: ["systems/stenberg-defensive-c", "architecture/dhh-majestic-monolith"]

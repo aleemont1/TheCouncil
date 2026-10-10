@@ -1,5 +1,5 @@
 ---
-name: "formal/lamport-state-invariants"
+name: lamport-state-invariants
 description: "Formal verification engineering discipline modeling computation as discrete state machines, establishing inductive safety and liveness invariants, and enforcing causal ordering via logical clocks."
 triggers: ["formal-verification", "inductive-invariants", "logical-clocks", "state-machine-replication", "safety-liveness", "tla-plus"]
 conflicts_with: ["resilience/armstrong-fault-isolation", "architecture/fowler-evolutionary-design"]

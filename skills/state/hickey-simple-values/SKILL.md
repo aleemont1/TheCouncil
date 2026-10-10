@@ -1,5 +1,5 @@
 ---
-name: "state/hickey-simple-values"
+name: hickey-simple-values
 description: "Architectural paradigm grounding software in immutable values, epochal time modeling, persistent data structures, and uncomplected simplicity over Place-Oriented Programming (PLOP) and mutable OOP state."
 triggers: ["simple-made-easy", "value-semantics", "persistent-data-structures", "epochal-state", "uncomplecting", "immutability"]
 conflicts_with: ["systems/antirez-pragmatic-c", "architecture/fowler-evolutionary-design"]

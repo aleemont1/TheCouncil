@@ -1,5 +1,5 @@
 ---
-name: "systems/cantrill-observability-first"
+name: cantrill-observability-first
 description: "Systems engineering discipline establishing production observability, zero-overhead dynamic instrumentation, kernel-level safety constraints, and explicit platform values as first-class architectural constraints."
 triggers: ["observability-first", "dtrace-architecture", "zero-overhead-probing", "mechanical-sympathy", "platform-values", "production-debuggability"]
 conflicts_with: ["types/king-type-driven-design"]

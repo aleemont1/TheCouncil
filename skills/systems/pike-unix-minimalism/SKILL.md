@@ -1,5 +1,5 @@
 ---
-name: "systems/pike-unix-minimalism"
+name: pike-unix-minimalism
 description: "Systems design paradigm emphasizing data-dominant architecture, standard core data structures, clear over clever expressions, small interfaces, and CSP concurrency over shared memory."
 triggers: ["data-dominates", "unix-minimalism", "go-proverbs", "clear-over-clever", "csp-concurrency", "small-interfaces"]
 conflicts_with: ["architecture/ousterhout-deep-modules", "architecture/fowler-evolutionary-design"]

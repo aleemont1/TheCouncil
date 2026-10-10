@@ -5,5 +5,26 @@
   "author": {
     "name": "aleemont1",
     "url": "https://github.com/aleemont1"
-  }
+  },
+  "skills": [
+    "./skills/architecture/dhh-majestic-monolith",
+    "./skills/architecture/fowler-evolutionary-design",
+    "./skills/architecture/ousterhout-deep-modules",
+    "./skills/architecture/uncle-bob-solid-orthodox",
+    "./skills/distributed/kleppmann-data-contracts",
+    "./skills/formal/lamport-state-invariants",
+    "./skills/performance/carmack-inlined-execution",
+    "./skills/performance/danluu-empirical-systems",
+    "./skills/performance/muratori-data-oriented",
+    "./skills/resilience/armstrong-fault-isolation",
+    "./skills/router/ask-council",
+    "./skills/security/djb-isolated-privilege",
+    "./skills/state/hickey-simple-values",
+    "./skills/systems/antirez-pragmatic-c",
+    "./skills/systems/bellard-autonomous-engine",
+    "./skills/systems/cantrill-observability-first",
+    "./skills/systems/pike-unix-minimalism",
+    "./skills/systems/stenberg-defensive-c",
+    "./skills/types/king-type-driven-design"
+  ]
 }

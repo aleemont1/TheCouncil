@@ -1,5 +1,5 @@
 ---
-name: "router/ask-council"
+name: ask-council
 description: "Interactive triage router and orchestrator inspired by Matt Pocock's skills system. Analyzes user intent, code context, or architectural dilemmas to recommend solo lenses, sequential pipelines, or dialectic tribunals."
 triggers: ["ask-council", "council", "triage", "which-lens", "recommend-skill"]
 conflicts_with: []

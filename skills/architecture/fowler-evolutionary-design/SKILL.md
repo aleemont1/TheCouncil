@@ -1,5 +1,5 @@
 ---
-name: "architecture/fowler-evolutionary-design"
+name: fowler-evolutionary-design
 description: "Evolutionary software architecture discipline driven by continuous refactoring, comprehensive automated testing, YAGNI, MonolithFirst strategy, and enterprise data patterns."
 triggers: ["evolutionary-architecture", "refactoring", "monolith-first", "poeaa-patterns", "yagni", "bounded-context"]
 conflicts_with: ["performance/muratori-data-oriented", "architecture/ousterhout-deep-modules"]

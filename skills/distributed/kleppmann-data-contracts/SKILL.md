@@ -1,5 +1,5 @@
 ---
-name: "distributed/kleppmann-data-contracts"
+name: kleppmann-data-contracts
 description: "Distributed data systems engineering centering on immutable append-only commit logs, unbundled derived data views, Conflict-Free Replicated Data Types (CRDTs), and backward/forward compatible schema evolution."
 triggers: ["append-only-log", "crdt-convergence", "unbundled-databases", "schema-evolution", "derived-views", "event-driven-contracts"]
 conflicts_with: ["architecture/dhh-majestic-monolith", "state/hickey-simple-values"]

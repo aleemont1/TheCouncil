@@ -1,5 +1,5 @@
 ---
-name: "performance/carmack-inlined-execution"
+name: carmack-inlined-execution
 description: "Simulation architecture discipline championing linear top-to-bottom inlined code execution, forward-only control flow, single polled main loops, and pragmatic pure functional C++ to eliminate hidden state mutation."
 triggers: ["inlined-execution", "polled-simulation-loop", "forward-only-control-flow", "functional-cpp", "state-mutation-elimination", "linear-code-flow"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "architecture/uncle-bob-solid-orthodox"]

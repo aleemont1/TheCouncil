@@ -1,5 +1,5 @@
 ---
-name: "systems/stenberg-defensive-c"
+name: stenberg-defensive-c
 description: "Defensive systems programming discipline adhering to strict C89 portability, warning-free cross-compilation, explicit error code propagation, state-machine protocol parsing, and disciplined vulnerability lifecycle."
 triggers: ["defensive-c", "libcurl-style", "cross-platform-portability", "c89-compliance", "vulnerability-lifecycle", "protocol-state-machine"]
 conflicts_with: ["resilience/armstrong-fault-isolation", "performance/muratori-data-oriented"]

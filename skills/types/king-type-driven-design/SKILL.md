@@ -1,5 +1,5 @@
 ---
-name: "types/king-type-driven-design"
+name: king-type-driven-design
 description: "Type-driven software design discipline converting untyped data into rich compile-time types at boundaries ('Parse, Don't Validate'), making illegal states unrepresentable, and treating static types as generative axioms."
 triggers: ["parse-dont-validate", "type-driven-design", "make-illegal-states-unrepresentable", "types-as-axioms", "algebraic-data-types", "compile-time-proofs"]
 conflicts_with: ["systems/pike-unix-minimalism", "systems/antirez-pragmatic-c"]

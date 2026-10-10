@@ -1,5 +1,5 @@
 ---
-name: "architecture/uncle-bob-solid-orthodox"
+name: uncle-bob-solid-orthodox
 description: "Orthodox software craftsmanship paradigm enforcing The Dependency Rule, concentric architectural layers, strict SOLID principles, dynamic polymorphism for boundary crossing, and Red-Green-Refactor TDD cycles."
 triggers: ["clean-architecture", "the-dependency-rule", "solid-principles", "cycles-of-tdd", "use-cases-interactors", "craftsmanship"]
 conflicts_with: ["performance/muratori-data-oriented", "architecture/ousterhout-deep-modules", "architecture/dhh-majestic-monolith"]

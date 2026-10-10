@@ -1,5 +1,5 @@
 ---
-name: "systems/antirez-pragmatic-c"
+name: antirez-pragmatic-c
 description: "Architectural discipline focusing on single-threaded event loops, mechanical sympathy, zero-dependency C, flat in-memory data structures, and radical code readability over multi-threaded locking abstractions."
 triggers: ["event-loop", "single-threaded", "in-memory", "pragmatic-c", "zero-dependency", "redis-architecture"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "state/hickey-simple-values"]

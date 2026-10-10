@@ -1,5 +1,5 @@
 ---
-name: "architecture/dhh-majestic-monolith"
+name: dhh-majestic-monolith
 description: "Pragmatic full-stack web architecture advocating single-codebase monolithic applications, integrated Active Record modeling, server-driven UI, bare-metal server deployment, and system integration testing over unit-test fundamentalism."
 triggers: ["majestic-monolith", "active-record", "system-testing", "cloud-exit", "omakase", "full-stack-framework"]
 conflicts_with: ["performance/danluu-empirical-systems"]

@@ -1,5 +1,5 @@
 ---
-name: "systems/bellard-autonomous-engine"
+name: bellard-autonomous-engine
 description: "Systems architecture discipline creating radically compact, autonomous, dependency-free monolithic C engines utilizing single-pass execution, embedded interpreters, and unified binary design."
 triggers: ["autonomous-engine", "zero-external-dependencies", "single-pass-execution", "compact-c-architecture", "quickjs-tcc-style", "micro-runtime"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "architecture/uncle-bob-solid-orthodox"]
