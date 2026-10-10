@@ -1,14 +1,14 @@
 # TheCouncil
 
-> Your AI coding agent writes enterprise-brained boilerplate. Make 18 legendary engineers argue about it instead.
+> Engineering lenses for AI coding agents, and a review mode where two opposing philosophies critique the same code.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Agent Skills](https://img.shields.io/badge/format-Agent%20Skills-8A2BE2)](https://agentskills.io)
 ![Works with](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Cursor%20%7C%20Gemini%20CLI%20%7C%20Copilot-informational)
 
-LLMs regress to the mean: pass-through wrappers, try/catch around everything, virtual dispatch in hot loops. TheCouncil installs **non-negotiable engineering lenses** (Carmack, Lamport, Muratori, Ousterhout, Pike, ...) that override those defaults, and a **Dialectic Tribunal** that pits two irreconcilable philosophies against each other on your code.
+LLMs drift toward generic enterprise code: pass-through wrappers, try/catch around everything, virtual dispatch in hot loops. TheCouncil is a set of skills that load one engineer's design constraints at a time (Carmack, Lamport, Muratori, Ousterhout, Pike, ...), plus a review mode that runs two opposing lenses on the same code.
 
-## 30-second demo
+## Quick start
 
 ```bash
 npx skills add aleemont1/TheCouncil        # auto-detects your agent
@@ -20,19 +20,19 @@ npx skills add aleemont1/TheCouncil        # auto-detects your agent
   Lens B: architecture/uncle-bob-solid-orthodox
 ```
 
-You get two uncompromising independent audits and a trade-off matrix, not a bland consensus.
+The output is two separate audits and a trade-off matrix.
 
 ---
 
-## What's inside
+## Overview
 
-`TheCouncil` is an open-source, modular set of engineering constraints and dialectic code-review lenses for autonomous coding agents (Claude Code, Antigravity CLI, Cursor, Aider). Each lens is distilled from the primary writings, benchmarks, and production codebases of 18 foundational figures in systems, architecture, and engineering philosophy. Lenses are inspired by, and not affiliated with or endorsed by, the people named.
+Each lens is a `SKILL.md` based on the published writing and code of one engineer, covering systems, architecture, and performance. They work with Claude Code, Antigravity CLI, Cursor, and Aider. The lenses are inspired by, and not affiliated with or endorsed by, the people named.
 
 ---
 
 ## The 18 Council Seats
 
-| Domain | Lens Slug (`SKILL.md`) | Author / Pioneer | Core Invariant | Primary Use Cases |
+| Domain | Lens Slug (`SKILL.md`) | Author | Core Invariant | Primary Use Cases |
 |---|---|---|---|---|
 | **Systems** | `antirez-pragmatic-c` | Salvatore Sanfilippo | Single-threaded event loops, zero-dependency flat C, radical readability. | TCP/UDP network servers, in-memory caches, high-throughput engines. |
 | **Systems** | `stenberg-defensive-c` | Daniel Stenberg | Industrial C defensive verification, zero memory leaks, immutable ABI stability. | Network protocol parsers, shared libraries exposed to untrusted input. |
@@ -57,7 +57,7 @@ You get two uncompromising independent audits and a trade-off matrix, not a blan
 
 ## The Council Chancellor (Triage Router & Orchestrator)
 
-In addition to the 18 specific seats, the repository includes an active triage orchestrator:
+The repository also includes a router that picks lenses for a task:
 
 | Domain | Lens Slug (`SKILL.md`) | Author / Role | Core Invariant | Primary Use Cases |
 |---|---|---|---|---|
@@ -83,7 +83,7 @@ Rather than performing generic pull request audits that dilute opinions into con
 claude "Run a Dialectic Tribunal on src/engine/tick.rs:
 - Lens A: performance/muratori-data-oriented
 - Lens B: architecture/uncle-bob-solid-orthodox
-Produce two uncompromising, independent audits followed by a trade-off matrix."
+Produce two independent audits followed by a trade-off matrix."
 ```
 
 #### Pre-Configured Dialectic Clash Pairs (`conflict_matrix`):
@@ -119,9 +119,9 @@ Stack complementary skills across orthogonal layers of abstraction to take a fea
 
 ## Installation & Agent Setup
 
-TheCouncil supports the standard AI agent installation paradigms: **`npx skills`** (auto-detects Cursor, Claude Code, Antigravity, Copilot, etc.) and **direct GitHub repository marketplace integration** (Claude Code `/plugin marketplace add` and Antigravity `agy plugin install`).
+Install with `npx skills` (auto-detects Cursor, Claude Code, Antigravity, Copilot, etc.) or as a plugin (`/plugin marketplace add` in Claude Code, `agy plugin install` in Antigravity).
 
-See the full [**Installation Guide (`INSTALL.md`)**](./INSTALL.md) for complete details.
+See [INSTALL.md](./INSTALL.md) for all options.
 
 ### 1. Universal Install via `npx skills` (All Agents)
 
@@ -208,10 +208,10 @@ TheCouncil/
 ## Acknowledgements & Primary Sources
 
 ### Structural & Agentic Inspiration
-The architectural blueprint for turning expert mental models into modular, manifest-driven LLM skills is directly inspired by **Matt Pocock** and his work on [mattpocock/skills](https://github.com/mattpocock/skills), which demonstrated how structured, trigger-aware skill catalogs empower autonomous coding agents.
+The skill catalog structure follows [mattpocock/skills](https://github.com/mattpocock/skills) by Matt Pocock.
 
 ### Primary Engineering Works
-Every rule, constraint, and checklist in this repository is directly derived from the published works, essays, and production architectures of the following authors:
+The lenses draw on the following works:
 
 * **Salvatore Sanfilippo (antirez):** *Redis System Architecture* and *Optimization: The Code You Don't Write*.
 * **Daniel Stenberg:** *HTTP/3 Explained*, *libcurl Source Architecture*, and *The curl Security Vulnerability Process*.

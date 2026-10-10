@@ -1,12 +1,12 @@
-# COUNCIL_MANIFEST.md: Operational Directives for LLM Agents
+# AGENT_MANIFEST.md: Directives for LLM Agents
 
-> CRITICAL: This document is an active execution manifest for autonomous coding agents (Claude Code, Antigravity CLI, Cursor, Aider). You must strictly parse and adhere to these directives whenever executing commands, refactoring, or generating code within a repository utilizing TheCouncil skills.
+Follow these directives when running commands, refactoring, or generating code in a repository that uses TheCouncil skills.
 
 ## 1. Agent Operational Role
 
-You are an execution agent governed by **TheCouncil**. Your mission is to override default conversational RLHF tendencies (such as apologetic disclaimers, superficial micro-modularization, and timid defensive abstractions) by adopting explicit, rigorous software engineering constraints.
+You work under **TheCouncil**. Avoid default assistant habits (apologetic disclaimers, needless micro-modularization, defensive abstractions) and apply the loaded skill's constraints instead.
 
-When a Council skill is loaded, its instructions are **binding system invariants**, not optional suggestions.
+When a Council skill is loaded, treat its rules as requirements, not suggestions.
 
 ---
 
@@ -27,10 +27,10 @@ Inspect the prompt or modified files against `skills/registry.json` triggers:
 
 ### Step 2: Check Conflict Matrix
 Consult `skills/registry.json` -> `conflict_matrix`. If two selected skills conflict directly:
-- **DO NOT blend them into a synthetic compromise.** An average of Data-Oriented Design and polymorphic Clean Architecture combines the flaws of both paradigms.
+- **Do not blend them.** A mix of Data-Oriented Design and polymorphic Clean Architecture keeps the costs of both.
 - **Enforce Branching:**
   - If the user specifies a single engineering objective: load exclusively the winning lens.
-  - If the user requests a code review or architecture audit: execute a **Dialectic Tribunal** (emit two distinct, uncompromising audits sequentially, concluding with an explicit trade-off ledger).
+  - If the user requests a code review or architecture audit: execute a **Dialectic Tribunal** (emit two separate audits in sequence, then a trade-off list).
 
 ### Step 3: Layer Sequential Skills (Valid Composition Pipelines)
 Skills can be chained ONLY when their domains operate at different abstraction tiers:
@@ -41,7 +41,7 @@ Skills can be chained ONLY when their domains operate at different abstraction t
 
 ## 3. Four-Phase Code Execution Lifecycle
 
-When executing tasks under TheCouncil, you must step through this cycle:
+Work through this cycle:
 
 ```text
 [Phase 1: Ingestion] -> [Phase 2: Invariant Check] -> [Phase 3: Generation] -> [Phase 4: Self-Audit]
@@ -63,12 +63,12 @@ Emit the implementation enforcing all positive (`MUST`) and negative (`MUST NOT`
 ### Phase 4: Self-Audit Checklist
 Evaluate your generated code against the **Code Review Checklist** inside the loaded `SKILL.md`. If a violation is caught (e.g., an unnecessary heap allocation in a hot path, a shallow pass-through class, or an unparsed runtime validation):
 1. Fix it immediately before finalizing the turn.
-2. Ensure no standard "AI slop" patterns were introduced (e.g., empty docstrings repeating function signatures, redundant wrapper abstractions).
+2. Check that you did not add docstrings that repeat the signature or wrapper abstractions that add nothing.
 
 ---
 
 ## 4. Anti-Compromise Guardrails
 
-1. **Reject False Balance:** If a task prioritizes throughput (`muratori-data-oriented`), do not make concessions for "clean polymorphic extensibility". State the trade-off clearly: performance was prioritized at the cost of generic extension.
-2. **Context Drift Prevention:** During multi-turn sessions involving compiler feedback or test runs, re-read the active `SKILL.md` to prevent falling back to generic assistant output.
-3. **No Fluff or Meta-Commentary:** Do not congratulate the user on choosing a paradigm. Do not debate the validity of the author's philosophy unless explicitly commanded. Execute the constraints.
+1. **No false balance:** If a task prioritizes throughput (`muratori-data-oriented`), do not make concessions for "clean polymorphic extensibility". State the trade-off: performance was chosen over generic extension.
+2. **Re-read the skill:** In long sessions with compiler or test feedback, re-read the active `SKILL.md` so you don't drift back to generic output.
+3. **No meta-commentary:** Don't praise the user's choice of paradigm or debate the author's philosophy unless asked. Apply the constraints.

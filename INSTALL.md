@@ -1,14 +1,12 @@
-# TheCouncil: AI Coding Agent Installation Guide
+# Installing TheCouncil
 
-This guide details how to install and activate **TheCouncil** (18 pioneering engineering lenses + the Chancellor intent router) into your AI coding assistant.
-
-TheCouncil is structured according to the universal Agent Skills specification and Claude Code / Antigravity plugin manifest formats. You can install it directly from GitHub using `npx`, by registering the repository as a plugin marketplace, or natively across supported IDEs and CLIs.
+TheCouncil is 18 engineering lenses plus the Chancellor router, packaged as Agent Skills and as Claude Code / Antigravity plugins. Install it with `npx`, as a plugin marketplace, or with editor rules.
 
 ---
 
 ## Method 1: Universal Installation via `npx skills` (Recommended)
 
-The Council supports the open [Agent Skills CLI](https://skills.sh/). This method auto-detects your installed coding agents (**Claude Code**, **Cursor**, **Antigravity**, **Copilot**, **Codex**, etc.) and registers the skills without cloning or manual scripting:
+Uses the [Agent Skills CLI](https://skills.sh/). It detects installed coding agents (Claude Code, Cursor, Antigravity, Copilot, Codex, etc.) and registers the skills without cloning:
 
 ```bash
 # Install all 19 skills into your project workspace (auto-detects active agents):
@@ -35,7 +33,7 @@ npx skills add aleemont1/TheCouncil --agent claude-code cursor -g
 
 ## Method 2: Claude Code & Codex Plugin Marketplace (Direct GitHub Repo)
 
-TheCouncil repository contains native `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` manifests, allowing you to add it directly as an external marketplace in Anthropic Claude Code and OpenAI Codex.
+The repository ships `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json`, so it can be added as a marketplace in Claude Code and Codex.
 
 ### In Claude Code
 
@@ -46,7 +44,7 @@ In an interactive Claude Code session (or Claude Code Desktop app):
 /plugin install the-council@the-council
 ```
 
-> **Tip:** You can also manage marketplaces visually in the Claude Code Desktop app: click **+** next to the prompt box → **Plugins** → **Add plugin**.
+In the Claude Code Desktop app: **+** next to the prompt box → **Plugins** → **Add plugin**.
 
 To uninstall:
 ```text
@@ -69,7 +67,7 @@ codex plugin remove the-council
 
 ## Method 3: Antigravity CLI / Gemini Extensions (Direct GitHub URL)
 
-The repository ships with `gemini-extension.json` and `plugin.json`. You can install it directly with Google's Antigravity CLI (`agy`) or Gemini CLI using the repository URL:
+The repository ships `gemini-extension.json` and `plugin.json`. Install with the Antigravity CLI (`agy`) or Gemini CLI:
 
 ```bash
 # Using Antigravity CLI (agy):
@@ -93,7 +91,7 @@ agy plugin uninstall the-council
 
 ## Method 4: Editor & Workspace Rule Directives
 
-For editor environments that read persistent workspace rules, TheCouncil provides ready-to-use rule configurations:
+For editors that read workspace rules:
 
 ### Cursor IDE
 Add `.cursor/rules/the-council.mdc` to your workspace:
@@ -152,7 +150,7 @@ When generating, refactoring, or reviewing code in this repository:
 
 ## Offline / Local Installation Utility
 
-If working in an air-gapped environment or if you prefer a standalone local symlink/copy from a cloned repository, the repository includes [`scripts/install.sh`](./scripts/install.sh):
+To install from a clone (e.g. air-gapped), use [`scripts/install.sh`](./scripts/install.sh):
 
 ```bash
 # Clone the repository
@@ -173,9 +171,9 @@ cd TheCouncil
 
 ---
 
-## Verifying & Using The Council
+## Verify
 
-Once installed via any of the methods above, verify that your agent recognizes the skills:
+After installing, check that your agent sees the skills:
 
 1. **Ask for triage**:
    > *"We are designing a high-throughput network engine in C++ and debating between polymorphic streams and cache-aligned ring buffers. Apply /ask-council."*
