@@ -1,6 +1,6 @@
 ---
 name: kleppmann-data-contracts
-description: "Distributed data systems engineering centering on immutable append-only commit logs, unbundled derived data views, Conflict-Free Replicated Data Types (CRDTs), and backward/forward compatible schema evolution."
+description: "Data contracts: immutable append-only logs, derived views, CRDTs, backward/forward-compatible schemas. Use when designing replication, event logs, sync or offline-first data, or schema evolution across services."
 triggers: ["append-only-log", "crdt-convergence", "unbundled-databases", "schema-evolution", "derived-views", "event-driven-contracts"]
 conflicts_with: ["architecture/dhh-majestic-monolith", "state/hickey-simple-values"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Martin Kleppmann: Immutable Logs & Convergence Contracts
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: The append-only log as the fundamental source of truth ("Turning the database inside out"); unbundling databases into immutable streams and derived read views; coordination-free replication via Conflict-Free Replicated Data Types (CRDTs) where merges are commutative, associative, and idempotent; explicit data contracts with strict backward and forward schema compatibility; and transparent trade-offs between consistency models (Linearizability, Causal Consistency, Eventual Consistency).

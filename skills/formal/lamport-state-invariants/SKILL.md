@@ -1,6 +1,6 @@
 ---
 name: lamport-state-invariants
-description: "Formal verification engineering discipline modeling computation as discrete state machines, establishing inductive safety and liveness invariants, and enforcing causal ordering via logical clocks."
+description: "State invariants: computation as state machines with inductive safety and liveness invariants, logical clocks for causal order. Use when reasoning about concurrency, distributed protocols or ordering bugs, or before writing a formal spec."
 triggers: ["formal-verification", "inductive-invariants", "logical-clocks", "state-machine-replication", "safety-liveness", "tla-plus"]
 conflicts_with: ["resilience/armstrong-fault-isolation", "architecture/fowler-evolutionary-design"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Leslie Lamport: Temporal Logic & Inductive State Invariants
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Computation modeled as discrete mathematical state machines ($s_0 \xrightarrow{\text{Action}} s_1 \xrightarrow{\text{Action}} s_2$); rigorous mathematical specification of inductive invariants; causal ordering governed by the "happened-before" relation ($\to$); monotonically increasing logical clocks ($C_j = \max(C_j, T_m) + 1$); replicated state machine determinism; and strict categorization of system properties into Safety ("nothing bad happens") and Liveness ("something good eventually happens").

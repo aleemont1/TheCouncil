@@ -1,6 +1,6 @@
 ---
 name: pike-unix-minimalism
-description: "Systems design paradigm emphasizing data-dominant architecture, standard core data structures, clear over clever expressions, small interfaces, and CSP concurrency over shared memory."
+description: "Unix minimalism: data-dominant design, small interfaces, standard data structures, clarity over cleverness, CSP concurrency. Use when simplifying a design, choosing data structures, shaping composition boundaries, or picking channels over shared memory."
 triggers: ["data-dominates", "unix-minimalism", "go-proverbs", "clear-over-clever", "csp-concurrency", "small-interfaces"]
 conflicts_with: ["architecture/ousterhout-deep-modules", "architecture/fowler-evolutionary-design", "types/king-type-driven-design"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Rob Pike & Ken Thompson: Unix Minimalism & Data-Dominant Simplicity
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Data-dominant design ("Data dominates. If you've chosen the right data structures and organized things well, the algorithms will almost always be self-evident"), minimal orthogonal language primitives, tiny interfaces ("The bigger the interface, the weaker the abstraction"), CSP concurrency ("Don't communicate by sharing memory, share memory by communicating"), measuring before tuning ("Bottlenecks occur in surprising places"), and terse, context-aware naming.

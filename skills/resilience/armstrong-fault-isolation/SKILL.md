@@ -1,6 +1,6 @@
 ---
 name: armstrong-fault-isolation
-description: "Resilience engineering architecture founded on share-nothing process isolation, 'let it crash' fail-fast semantics, hierarchical supervisor trees, and asynchronous message passing."
+description: "Fault isolation: share-nothing processes, let-it-crash, supervisor trees, asynchronous messages. Use when designing worker or actor systems, error recovery and restart strategy, or when defensive try/catch is spreading."
 triggers: ["let-it-crash", "actor-isolation", "supervisor-tree", "share-nothing", "erlang-otp", "fault-tolerance"]
 conflicts_with: ["systems/stenberg-defensive-c", "formal/lamport-state-invariants"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Joe Armstrong: Fault Isolation & Supervision Hierarchies
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Share-nothing concurrency (isolated processes with independent heaps and garbage collectors), pure asynchronous message passing, fail-fast "let it crash" philosophy, absolute separation between normal-path code and error-recovery code, hierarchical supervisor trees (`one_for_one`, `one_for_all`, `rest_for_one`), and self-healing systems that run forever.

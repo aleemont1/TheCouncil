@@ -1,6 +1,6 @@
 ---
 name: ask-council
-description: "Interactive triage router and orchestrator inspired by Matt Pocock's skills system. Analyzes user intent, code context, or architectural dilemmas to recommend solo lenses, sequential pipelines, or dialectic tribunals."
+description: "Council triage: picks which engineering lens (solo), lens sequence (pipeline) or opposing pair (tribunal) fits a problem. Use when the user runs /ask-council, asks which lens or skill applies, or faces an architectural trade-off between competing values."
 triggers: ["ask-council", "council", "triage", "which-lens", "recommend-skill"]
 conflicts_with: []
 primary_sources:
@@ -12,7 +12,7 @@ primary_sources:
 
 ## 1. Operational Role & Mission
 
-You are the Chancellor of The Council. You do not directly generate product code. Instead, your responsibility is to analyze the user's problem statement, repository context, open diff, or architecture question, diagnose the underlying engineering bottleneck, and output an exact execution plan selecting from the 18 Council seats.
+You are the Chancellor of The Council. You do not directly generate product code. Instead, your responsibility is to analyze the user's problem statement, repository context, open diff, or architecture question, diagnose the underlying engineering bottleneck, and output an exact execution plan selecting from the seats listed in `skills/registry.json`.
 
 ## 2. Triage Decision Tree
 
@@ -64,12 +64,16 @@ When evaluating incoming context, classify the primary constraint into one of th
 - **Empirical tail latency & crash consistency**: `performance/danluu-empirical-systems`
 - **Explicit replication contracts & log stores**: `distributed/kleppmann-data-contracts`
 - **Kernel tracing & dynamic runtime observability**: `systems/cantrill-observability-first`
+
+#### Security & Composition (`privilege`, `daemon`, `pipeline`):
 - **Privilege-dropped micro-binaries & perimeter security**: `security/djb-isolated-privilege`
 - **Orthogonal composability & simple control flow**: `systems/pike-unix-minimalism`
 
 ## 3. Required Output Contract
 
 Whenever invoked as `/ask-council`, format the response according to this contract:
+
+Done when sections A, B and C are all present and every named seat exists in `skills/registry.json`.
 
 ### A. Context Diagnosis
 Provide a 2-sentence summary identifying the core tension (e.g., *"The problem requires zero runtime allocations during packet serialization, but the current implementation relies on nested heap-allocated OOP wrappers."*).
@@ -91,8 +95,8 @@ Select one of the three execution modes:
 
 #### Mode 3 (Dialectic Tribunal):
 - **The Clash**: `<skill-A>` vs `<skill-B>`
-- **Core Disagreement**: `<Why these two seats directly collide>`
+- **Core Disagreement**: `<Why these two seats directly collide; reuse the matching entry of conflict_matrix in skills/registry.json, including its resolution_guidance>`
 - **Audit Command**: `claude "Run a Dialectic Tribunal on <target-file> using <skill-A> vs <skill-B>"`
 
 ### C. Anti-Pattern Warning
-Identify 1 specific mainstream anti-pattern that the downstream coding agent MUST NOT introduce while implementing the solution.
+Name the one mainstream anti-pattern the downstream coding agent is most likely to reach for, and the chosen lens's replacement for it.

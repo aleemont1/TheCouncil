@@ -1,6 +1,6 @@
 ---
 name: king-type-driven-design
-description: "Type-driven software design discipline converting untyped data into rich compile-time types at boundaries ('Parse, Don't Validate'), making illegal states unrepresentable, and treating static types as generative axioms."
+description: "Parse, don't validate: raw data becomes rich types at the boundary, illegal states unrepresentable, total functions. Use when designing domain types or input handling, or reviewing validation that returns booleans, scattered checks, or flag-based state."
 triggers: ["parse-dont-validate", "type-driven-design", "make-illegal-states-unrepresentable", "types-as-axioms", "algebraic-data-types", "compile-time-proofs"]
 conflicts_with: ["systems/pike-unix-minimalism", "systems/antirez-pragmatic-c", "systems/cantrill-observability-first"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Alexis King: Type-Driven Correctness & "Parse, Don't Validate"
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: "Parse, don't validate" (transforming unstructured, untrusted data at the system boundary into precise, rich types that capture and preserve verified facts throughout the program); making illegal states unrepresentable using Algebraic Data Types (ADTs); treating types as generative axioms that define what valid states exist; total functions that can never fail at runtime; and pushing uncertainty to the system perimeter.

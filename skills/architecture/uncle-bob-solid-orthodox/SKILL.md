@@ -1,6 +1,6 @@
 ---
 name: uncle-bob-solid-orthodox
-description: "Orthodox software craftsmanship paradigm enforcing The Dependency Rule, concentric architectural layers, strict SOLID principles, dynamic polymorphism for boundary crossing, and Red-Green-Refactor TDD cycles."
+description: "Clean Architecture: the Dependency Rule, concentric layers, SOLID, polymorphic boundary crossing, red-green-refactor. Use when separating business rules from frameworks and I/O, untangling dependency direction, or reviewing layering."
 triggers: ["clean-architecture", "the-dependency-rule", "solid-principles", "cycles-of-tdd", "use-cases-interactors", "craftsmanship"]
 conflicts_with: ["performance/muratori-data-oriented", "architecture/ousterhout-deep-modules", "architecture/dhh-majestic-monolith", "performance/carmack-inlined-execution"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Robert C. Martin (Uncle Bob): Orthodox Clean Architecture & Craftsmanship
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: *The Dependency Rule* (source code dependencies MUST point strictly inwards: Entities $\leftarrow$ Use Cases $\leftarrow$ Interface Adapters $\leftarrow$ Frameworks/Drivers); decoupling core business rules from databases, UI, and external frameworks; Dependency Inversion Principle (DIP) via dynamic polymorphism; the Three Laws of Test-Driven Development (Red-Green-Refactor cycles); single-responsibility methods and classes; and passing plain Data Transfer Objects (DTOs) across architectural boundaries.

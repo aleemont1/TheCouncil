@@ -1,6 +1,6 @@
 ---
 name: hickey-simple-values
-description: "Architectural paradigm grounding software in immutable values, epochal time modeling, persistent data structures, and uncomplected simplicity over Place-Oriented Programming (PLOP) and mutable OOP state."
+description: "Simple values: immutable data, persistent structures, state as identity over time, uncomplected design. Use when untangling shared mutable state, modeling time or history, or choosing between in-place mutation and value semantics."
 triggers: ["simple-made-easy", "value-semantics", "persistent-data-structures", "epochal-state", "uncomplecting", "immutability"]
 conflicts_with: ["systems/antirez-pragmatic-c", "architecture/fowler-evolutionary-design", "distributed/kleppmann-data-contracts"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Rich Hickey: Value Semantics & Epochal State
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: The fundamental distinction between Simple (objective property of software meaning unentangled, single-braid, non-complected) and Easy (subjective property meaning familiar, near to hand); immutable values as first-class primitives; persistent data structures with structural sharing; the Epochal Time Model (an identity is a causal succession of immutable states across time); and accretive information systems where facts are accumulated rather than destroyed.

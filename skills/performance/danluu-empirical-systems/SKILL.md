@@ -1,6 +1,6 @@
 ---
 name: danluu-empirical-systems
-description: "Empirical software engineering methodology relying on real-world measurements, crash-consistency verification, latency distribution analysis, off-CPU tracing, and skepticism toward POSIX and vendor abstractions."
+description: "Empirical systems: measure real workloads, latency distributions, crash consistency and off-CPU time; distrust vendor and POSIX assumptions. Use when benchmarking, chasing tail latency, or reviewing storage and fsync persistence code."
 triggers: ["empirical-systems", "crash-consistency", "tail-latency", "tracing-vs-sampling", "hardware-reality", "fsync-durability"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "architecture/dhh-majestic-monolith"]
 primary_sources:
@@ -13,6 +13,8 @@ primary_sources:
 ---
 
 # Dan Luu: Empirical Systems Analysis & Hardware Reality
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Rigorous empirical measurement over specification promises or theoretical claims; end-to-end pipeline observation; crash consistency verification across sudden power losses; full latency distribution auditing (p95, p99, p99.9, max); and tracing off-CPU blocking states (lock contention, context switches, disk I/O).

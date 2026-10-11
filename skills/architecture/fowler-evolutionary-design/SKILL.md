@@ -1,6 +1,6 @@
 ---
 name: fowler-evolutionary-design
-description: "Evolutionary software architecture discipline driven by continuous refactoring, comprehensive automated testing, YAGNI, MonolithFirst strategy, and enterprise data patterns."
+description: "Evolutionary design: continuous refactoring under automated tests, YAGNI, MonolithFirst, enterprise data patterns. Use when deciding how much architecture to build up front, whether to split a service, or how to sequence a refactor safely."
 triggers: ["evolutionary-architecture", "refactoring", "monolith-first", "poeaa-patterns", "yagni", "bounded-context"]
 conflicts_with: ["performance/muratori-data-oriented", "architecture/ousterhout-deep-modules", "performance/carmack-inlined-execution"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Martin Fowler: Evolutionary Design & Refactoring Discipline
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Evolutionary architecture (growing software via continuous refactoring in small, behavior-preserving steps), comprehensive automated testing as a design safety harness, the MonolithFirst pattern ("start with a monolith first, even if you think it's likely you will benefit from microservices later on"), YAGNI ("You Aren't Gonna Need It"), and domain-driven enterprise abstractions (Repository, Data Mapper, Unit of Work, Strangler Fig).

@@ -1,6 +1,6 @@
 ---
 name: djb-isolated-privilege
-description: "Security architecture discipline enforcing elimination of trusted code, radical multi-process privilege separation, tiny single-purpose micro-binaries, supervised foreground execution, and replacing library complexity with simple OS process boundaries."
+description: "Privilege isolation: eliminate trusted code, split into tiny single-purpose processes under distinct UIDs, supervised foreground services. Use when designing network daemons or untrusted-input parsers, or deciding where privilege boundaries go."
 triggers: ["radical-privilege-separation", "micro-binaries", "bug-elimination", "daemontools", "qmail-architecture", "zero-root-daemons"]
 conflicts_with: ["systems/stenberg-defensive-c", "architecture/dhh-majestic-monolith"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Daniel J. Bernstein: Radical Privilege Isolation & Bug Elimination
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Eliminating trusted code ("Eliminating bugs, eliminating code, eliminating trusted code"); radical multi-process privilege separation into distinct, tiny single-purpose micro-binaries; distinct UNIX UIDs/GIDs for each system responsibility; non-forking foreground execution supervised by tools like `daemontools` (`supervise` / `svscan`); fixed-size buffers and static limits; and strict data flow pipes over complex shared-memory abstractions.

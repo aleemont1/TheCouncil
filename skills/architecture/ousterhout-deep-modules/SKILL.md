@@ -1,6 +1,6 @@
 ---
 name: ousterhout-deep-modules
-description: "Software design methodology maximizing the ratio of functionality provided to interface complexity, championing deep modules, information hiding, and defining errors out of existence while rejecting shallow classitis and pass-through methods."
+description: "Deep modules: small interfaces hiding large functionality, information hiding, errors defined out of existence. Use when designing or reviewing module and API boundaries, or when code shows classitis, pass-through methods, or exception-heavy interfaces."
 triggers: ["deep-modules", "information-hiding", "classitis", "pass-through-methods", "define-errors-out-of-existence", "complexity-reduction"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "systems/pike-unix-minimalism", "architecture/uncle-bob-solid-orthodox"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # John Ousterhout: Deep Modules & Complexity Minimization
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Deep modules (maximizing functionality provided relative to interface complexity), information hiding (Parnas principle: encapsulating design decisions so internal changes do not ripple), strategic programming (investing 10–20% continuously to simplify design rather than tactical hacking), and defining errors out of existence (designing APIs where edge cases become natural normal behavior).

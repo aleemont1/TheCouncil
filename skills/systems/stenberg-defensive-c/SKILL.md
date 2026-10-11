@@ -1,6 +1,6 @@
 ---
 name: stenberg-defensive-c
-description: "Defensive systems programming discipline adhering to strict C89 portability, warning-free cross-compilation, explicit error code propagation, state-machine protocol parsing, and disciplined vulnerability lifecycle."
+description: "Defensive C: C89 portability, warning-free builds, explicit error propagation, state-machine protocol parsers, disciplined vulnerability handling. Use when writing or reviewing C that parses untrusted input, must port widely, or ships as a library."
 triggers: ["defensive-c", "libcurl-style", "cross-platform-portability", "c89-compliance", "vulnerability-lifecycle", "protocol-state-machine"]
 conflicts_with: ["resilience/armstrong-fault-isolation", "performance/muratori-data-oriented", "security/djb-isolated-privilege"]
 primary_sources:
@@ -13,6 +13,8 @@ primary_sources:
 ---
 
 # Daniel Stenberg: Defensive C & Universal Portability
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Strict C89 standard compliance, warning-free cross-compilation across hundreds of operating systems and CPU architectures, explicit error propagation via typed return codes (`CURLcode`), defensive cleanup idioms (`Curl_safefree`), non-blocking state machine protocol parsers, and rock-solid library boundaries where no input can ever crash the host process.

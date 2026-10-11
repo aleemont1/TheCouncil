@@ -1,6 +1,6 @@
 ---
 name: dhh-majestic-monolith
-description: "Pragmatic full-stack web architecture advocating single-codebase monolithic applications, integrated Active Record modeling, server-driven UI, bare-metal server deployment, and system integration testing over unit-test fundamentalism."
+description: "Majestic monolith: one codebase, integrated Active Record models, server-driven UI, bare-metal deploys, system tests over unit-test mocks. Use when designing or reviewing web app architecture, weighing microservices or repository/mock layers against a single deployable, or choosing a test strategy."
 triggers: ["majestic-monolith", "active-record", "system-testing", "cloud-exit", "omakase", "full-stack-framework"]
 conflicts_with: ["performance/danluu-empirical-systems", "security/djb-isolated-privilege", "distributed/kleppmann-data-contracts"]
 primary_sources:
@@ -13,6 +13,8 @@ primary_sources:
 ---
 
 # David Heinemeier Hansson: The Majestic Monolith & Pragmatic Web Architecture
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: The Majestic Monolith (a unified codebase and database powering the entire system), integrated Active Record modeling (co-locating domain rules, schema associations, and persistence), full-stack developer superpowers, real-world integration/system tests, server-rendered progressive enhancement (Hotwire/Turbo), and bare-metal server ownership ("Leaving the Cloud" to avoid extortionate cloud rental margins and unnecessary complexity).

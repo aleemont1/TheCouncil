@@ -1,6 +1,6 @@
 ---
 name: cantrill-observability-first
-description: "Systems engineering discipline establishing production observability, zero-overhead dynamic instrumentation, kernel-level safety constraints, and explicit platform values as first-class architectural constraints."
+description: "Observability first: production tracing with zero disabled probe effect, bounded telemetry, safe instrumentation, explicit platform values. Use when adding logging, metrics or tracing, designing for production debuggability, or reviewing hot-path telemetry."
 triggers: ["observability-first", "dtrace-architecture", "zero-overhead-probing", "mechanical-sympathy", "platform-values", "production-debuggability"]
 conflicts_with: ["types/king-type-driven-design"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Bryan Cantrill: Observability-First Systems & Mechanical Sympathy
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Observability as an uncompromising day-zero engineering constraint; zero disabled probe effect (instrumentation points must cost zero instructions or a single `nop` when inactive, never degrading production throughput); absolute probe safety (tracing must never cause kernel panics, page faults, deadlocks, or process crashes); deep mechanical sympathy with operating system internals; and explicit alignment around core engineering values (debuggability, robustness, performance, operational transparency).

@@ -1,6 +1,6 @@
 ---
 name: antirez-pragmatic-c
-description: "Architectural discipline focusing on single-threaded event loops, mechanical sympathy, zero-dependency C, flat in-memory data structures, and radical code readability over multi-threaded locking abstractions."
+description: "Pragmatic C: single-threaded event loop, mechanical sympathy, zero dependencies, flat in-memory data structures, readable code. Use when designing in-memory servers or network daemons, or weighing threads and locks against one loop."
 triggers: ["event-loop", "single-threaded", "in-memory", "pragmatic-c", "zero-dependency", "redis-architecture"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "state/hickey-simple-values"]
 primary_sources:
@@ -13,6 +13,8 @@ primary_sources:
 ---
 
 # Salvatore Sanfilippo: Pragmatic In-Memory Systems & Single-Threaded Simplicity
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Single-threaded event-driven execution (`ae.c` event loop multiplexing via `epoll`/`kqueue`/`select`), absolute command atomicity without mutexes, mechanical sympathy with memory hierarchies, predictable sub-millisecond tail latencies, zero-dependency self-contained C codebases, and radical readability.

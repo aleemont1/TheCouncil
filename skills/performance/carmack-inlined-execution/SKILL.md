@@ -1,6 +1,6 @@
 ---
 name: carmack-inlined-execution
-description: "Simulation architecture discipline championing linear top-to-bottom inlined code execution, forward-only control flow, single polled main loops, and pragmatic pure functional C++ to eliminate hidden state mutation."
+description: "Inlined execution: linear top-to-bottom code, forward-only control flow, one polled main loop, pure functions in C++. Use when simulation, game or real-time loops hide state across many small functions, or when deciding whether to inline."
 triggers: ["inlined-execution", "polled-simulation-loop", "forward-only-control-flow", "functional-cpp", "state-mutation-elimination", "linear-code-flow"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "architecture/uncle-bob-solid-orthodox"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # John Carmack: Inlined Execution & Polled Simulation Loops
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Linear top-to-bottom execution flow (Style C: inlining sequential routines directly into the calling pipeline), forward-only control flow inspired by aerospace flight control systems (e.g., Saab Gripen fly-by-wire software with zero backward branches in the main tick), deterministic single-threaded polled loops over preemptive RTOS threads, and pragmatic functional C++ (maximizing pure functions that take values and return values without mutating internal or global state).

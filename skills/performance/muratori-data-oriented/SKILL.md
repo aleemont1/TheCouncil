@@ -1,6 +1,6 @@
 ---
 name: muratori-data-oriented
-description: "Mechanical sympathy and data-oriented design discipline rejecting 'Clean Code' abstractions, virtual method tables, and defensive caching in favor of contiguous cache locality, table-driven switch dispatch, SIMD vectorization, and on-demand recomputation."
+description: "Data-oriented design: contiguous cache-friendly layout, table-driven dispatch, SIMD, recompute over cache. Use when optimizing hot loops, replacing virtual dispatch or class hierarchies, or choosing data layout in performance-critical code."
 triggers: ["data-oriented-design", "clean-code-critique", "recompute-everything", "cache-locality", "simd-vectorization", "hot-path"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "systems/stenberg-defensive-c", "architecture/uncle-bob-solid-orthodox"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Casey Muratori: Data-Oriented Design & Hardware-Sympathetic Performance
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Mechanical sympathy with CPU hardware (L1/L2/L3 cache lines, prefetchers, branch predictors, SIMD/AVX vector units), contiguous memory layouts (flat buffers, Struct-of-Arrays), recomputing values on the fly over complex invalidating caches, and optimizing for the transformational center of the loop.

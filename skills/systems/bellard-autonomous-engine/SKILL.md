@@ -1,6 +1,6 @@
 ---
 name: bellard-autonomous-engine
-description: "Systems architecture discipline creating radically compact, autonomous, dependency-free monolithic C engines utilizing single-pass execution, embedded interpreters, and unified binary design."
+description: "Autonomous engine: compact dependency-free monolithic C, single-pass execution, embedded interpreter, one binary. Use when building small self-contained tools, emulators, codecs or interpreters, or removing dependencies."
 triggers: ["autonomous-engine", "zero-external-dependencies", "single-pass-execution", "compact-c-architecture", "quickjs-tcc-style", "micro-runtime"]
 conflicts_with: ["architecture/fowler-evolutionary-design", "architecture/uncle-bob-solid-orthodox"]
 primary_sources:
@@ -11,6 +11,8 @@ primary_sources:
 ---
 
 # Fabrice Bellard: Autonomous Monolithic Engines & Compact Single-Pass Execution
+
+**Apply**: write or review the target under Sections 2 and 3. Done when every rule is either satisfied or reported as violated, and every checklist item is marked hit (with `file:line`) or clear. When a rule collides with a stated requirement, name the trade-off from Section 1 rather than bending the rule silently.
 
 ## 1. Core Philosophy & Deliberate Rejections
 - **Prioritizes**: Radically compact, self-contained monolithic C engines (e.g., QuickJS, TinyCC, FFmpeg, QEMU); absolute zero external runtime dependencies; single-pass compilation and interpretation without intermediate representation bloat (TCC compiles 9x faster than GCC by generating machine code directly from a single pass); sub-millisecond instance lifecycles (< 300 microseconds for complete runtime startup/teardown in QuickJS); and direct, transparent manipulation of memory and hardware registers.
